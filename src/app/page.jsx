@@ -1,0 +1,308 @@
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import heroImage from '../app/images/hero-image.jpg';
+import aboutImage from '../app/images/about-image.jpg';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+function AnimatedSection({ children, className, id }) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      id={id}
+      ref={ref}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={fadeIn}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export default function Home() {
+  // Verify sections exist after component mounts
+  useEffect(() => {
+    const servicesSection = document.getElementById('services-section');
+    const aboutSection = document.getElementById('about-section');
+    
+    if (servicesSection) {
+      console.log('Services section found with ID: services-section');
+    } else {
+      console.warn('Services section NOT found!');
+    }
+    
+    if (aboutSection) {
+      console.log('About section found with ID: about-section');
+    } else {
+      console.warn('About section NOT found!');
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-white font-['Inter']">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <motion.h1 
+                className="text-5xl font-['Instrument Sans'] text-[#503622] leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                Develop Emotional Intelligence
+              </motion.h1>
+              <motion.p 
+                className="text-md font-['Inter Medium'] text-[#503622] leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                EQ Therapy specializes in working with high-performing professionals through evidence-based therapy approaches. We help you develop emotional intelligence and achieve your goals.
+              </motion.p>
+              <motion.div 
+                className="flex gap-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Link
+                  href="/book"
+                  className="px-6 py-3 rounded-full bg-[#503622] font-medium text-white hover:bg-[#5C4D3C] transition-colors"
+                >
+                  Book a Session
+                </Link>
+                <Link
+                  href="/about"
+                  className="px-6 py-3 rounded-full font-medium border border-2 border-[#8B7355] text-[#8B7355] hover:bg-[#F5F1EE] transition-colors"
+                >
+                  Learn More
+                </Link>
+              </motion.div>
+            </motion.div>
+            <motion.div 
+              className="relative h-[500px] rounded-2xl overflow-hidden"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Image
+                src={heroImage}
+                alt="Therapy Session"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          </div>
+            </div>
+          </section>
+
+      {/* Primary Therapy Services Section */}
+      <AnimatedSection className="py-20 bg-[#F5F1EE]">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Our Clinical Approaches</h2>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {[
+              {
+                title: 'Cognitive Behavioral Therapy',
+                description: 'Evidence-based approach to identify and change negative thought patterns.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="#503622" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M12 5a3 3 0 1 0-5.997.125a4 4 0 0 0-2.526 5.77a4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125a4 4 0 0 1 2.526 5.77a4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4a4.5 4.5 0 0 1-3 4m8.599-6.5a3 3 0 0 0 .399-1.375m-11.995 0A3 3 0 0 0 6.401 6.5m-2.924 4.396a4 4 0 0 1 .585-.396m15.876 0a4 4 0 0 1 .585.396M6 18a4 4 0 0 1-1.967-.516m15.934 0A4 4 0 0 1 18 18"/></g></svg>
+              },
+              {
+                title: 'Sports Psychology',
+                description: 'Mental training for athletes to enhance performance and well-being.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#503622"><path d="M15.25 6.5a2.25 2.25 0 1 0 0-4.5a2.25 2.25 0 0 0 0 4.5m-2.867-.001c-1.495-.21-4.912.397-6.32 4.15a1 1 0 1 0 1.873.702c.584-1.555 1.636-2.316 2.574-2.655l-1.17 3.006q-.029.075-.045.15a1 1 0 0 0 .164.91l3.562 4.607l.231 3.693a1 1 0 1 0 1.996-.124l-.27-4.307l-2.092-2.707l1.373-2.661l.093.134a2 2 0 0 0 2.42.711l2.115-.886a1 1 0 0 0-.773-1.844l-2.115.886l-1.606-2.335a3.04 3.04 0 0 0-1.661-1.36a1.4 1.4 0 0 0-.35-.07"/><path d="m8.45 16.45l.827-2.452l1.469 1.9l-.402 1.191a2 2 0 0 1-2.032 1.356l-2.88-.197a1 1 0 1 1 .136-1.996z"/></g></svg>
+              },
+              {
+                title: 'Interpersonal Psychotherapy',
+                description: 'Improve relationships and communication with others.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="m20.713 7.128l-.246.566a.506.506 0 0 1-.934 0l-.246-.566a4.36 4.36 0 0 0-2.22-2.25l-.759-.339a.53.53 0 0 1 0-.963l.717-.319A4.37 4.37 0 0 0 19.276.931L19.53.32a.506.506 0 0 1 .942 0l.253.61a4.37 4.37 0 0 0 2.25 2.327l.718.32a.53.53 0 0 1 0 .962l-.76.338a4.36 4.36 0 0 0-2.219 2.251M9 2a8 8 0 0 1 7.934 6.965l2.25 3.539c.148.233.118.58-.225.728L17 14.07V17a2 2 0 0 1-2 2h-1.999L13 22H4v-3.694c0-1.18-.436-2.297-1.244-3.305A8 8 0 0 1 9 2m0 2a6 6 0 0 0-4.684 9.75C5.41 15.114 6 16.667 6 18.306V20h5l.002-3H15v-4.248l1.55-.664l-1.543-2.425l-.057-.442A6 6 0 0 0 9 4m10.49 12.993l1.664 1.11A10.95 10.95 0 0 0 23 12q-.001-1.025-.181-2l-1.943.5q.123.733.124 1.5a8.96 8.96 0 0 1-1.51 4.993"/></svg>
+              },
+              {
+                title: 'Solution-Focused Therapy',
+                description: 'Goal-oriented approach to achieve specific outcomes.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="#503622"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#503622" d="M12 2q.563 0 1.11.061a1 1 0 0 1-.22 1.988a8 8 0 1 0 7.061 7.061a1 1 0 1 1 1.988-.22q.06.547.061 1.11c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m-.032 5.877a1 1 0 0 1-.719 1.217A3.002 3.002 0 0 0 12 15a3 3 0 0 0 2.906-2.25a1 1 0 0 1 1.936.5A5.002 5.002 0 0 1 7 12a5 5 0 0 1 3.75-4.842a1 1 0 0 1 1.218.719m6.536-5.75a1 1 0 0 1 .617.923v1.83h1.829a1 1 0 0 1 .707 1.707L18.12 10.12a1 1 0 0 1-.707.293H15l-1.828 1.829a1 1 0 0 1-1.415-1.415L13.586 9V6.586a1 1 0 0 1 .293-.707l3.535-3.536a1 1 0 0 1 1.09-.217m-1.383 3.337L15.586 7v1.414H17l1.536-1.535h-.415a1 1 0 0 1-1-1z"/></g></svg>
+              }
+            ].map((service, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                variants={fadeIn}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{service.title}</h3>
+                <p className="text-sm font-['Inter Medium'] text-[#503622]">{service.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+            </div>
+      </AnimatedSection>
+
+      {/* Duplicate Services Section - Specialized Therapies */}
+      <AnimatedSection id="services-section" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Specialized Services</h2>
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            {[
+              {
+                title: 'Career Counseling',
+                description: 'Navigate career transitions and overcome professional challenges.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2m4 4V4h-4v2z"/></svg>
+              },
+              {
+                title: 'Anxiety Management',
+                description: 'Build effective coping strategies for managing anxiety and stress.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5l-9-4m-2 8h2.5L12 7l-.5 2Zm4 9h-4c-.55 0-1-.45-1-1s.45-1 1-1v-4c-.55 0-1-.45-1-1s.45-1 1-1h4c.55 0 1 .45 1 1s-.45 1-1 1v4c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>
+              },
+              {
+                title: 'Relationship Therapy',
+                description: 'Strengthen communication and heal relationship patterns.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"/></svg>
+              },
+              {
+                title: 'Entrepreneurial Leadership',
+                description: 'Balance professional growth with personal wellbeing in leadership roles.',
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M20 5h-3.2l1.6 8h-1.6l-1.6-8H4c-1.1 0-2 .9-2 2v8c0 2.8 2.2 5 5 5h13c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 13H7c-1.7 0-3-1.3-3-3v-6h16z"/></svg>
+              }
+            ].map((service, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-[#F5F1EE] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                variants={fadeIn}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{service.title}</h3>
+                <p className="text-sm font-['Inter Medium'] text-[#503622]">{service.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </AnimatedSection>
+
+      {/* About Section */}
+      <AnimatedSection id="about-section" className="py-20 bg-[#F5F1EE]">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+              <Image
+                src={aboutImage}
+                alt="About EQ Therapy"
+                fill
+                className="object-cover"
+              />
+      </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl font-['Instrument Sans'] text-[#8B7355]">The EQ Method</h2>
+              <p className="text-[#5C4D3C] font-['Inter Medium'] leading-relaxed">
+                Our unique approach combines psychodynamic therapy, cognitive behavioral therapy, interpersonal psychotherapy, and solution-focused therapy to create a comprehensive treatment plan tailored to your needs.
+              </p>
+              <motion.div 
+                className="space-y-4"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {[
+                  '1-3 months: Psychodynamic Therapy',
+                  '4-6 months: Cognitive Behavioral Therapy',
+                  '7-9 months: Interpersonal Psychotherapy',
+                  '10-12 months: Solution-Focused Therapy'
+                ].map((phase, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="flex items-center gap-3"
+                    variants={fadeIn}
+                  >
+                    <div className="w-2 h-2 rounded-full bg-[#8B7355]" />
+                    <p className="text-[#5C4D3C] font-['Inter Medium']">{phase}</p>
+                  </motion.div>
+                ))}
+              </motion.div>
+              <Link
+                href="/about"
+                className="inline-block px-6 py-3 rounded-full bg-[#8B7355] text-white hover:bg-[#5C4D3C] transition-colors"
+              >
+                Learn More About Our Method
+              </Link>
+            </div>
+  </div>
+  </div>
+      </AnimatedSection>
+
+      {/* CTA Section */}
+      <AnimatedSection className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto text-center px-4">
+          <h2 className="text-3xl font-['Instrument Sans'] text-[#8B7355] mb-6">
+            Ready to Start Your Journey?
+          </h2>
+          <p className="text-[#5C4D3C] font-['Inter Medium'] mb-8">
+            Take the first step towards developing your emotional intelligence and achieving your goals.
+          </p>
+          <Link
+            href="/book"
+            className="inline-block px-8 py-4 rounded-full bg-[#8B7355] text-white hover:bg-[#5C4D3C] transition-colors"
+          >
+            Book Your First Session
+          </Link>
+      </div>
+      </AnimatedSection>
+
+      <Footer />
+    </div>
+  );
+}
