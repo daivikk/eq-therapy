@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import heroImage from '../app/images/hero-image.jpg';
-import aboutImage from '../app/images/about-image.jpg';
+import linImage from '../app/images/lin.png';
+import shadenImage from '../app/images/shaden.png';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
@@ -105,13 +105,13 @@ export default function Home() {
               >
                 <Link
                   href="/book"
-                  className="px-6 py-3 rounded-full bg-[#503622] font-medium text-white hover:bg-[#5C4D3C] transition-colors"
+                  className="px-4 py-2 rounded-full bg-[#503622] font-medium text-white hover:bg-[#5C4D3C] transition-colors text-sm"
                 >
                   Book a Session
                 </Link>
                 <Link
                   href="/about"
-                  className="px-6 py-3 rounded-full font-medium border border-2 border-[#8B7355] text-[#8B7355] hover:bg-[#F5F1EE] transition-colors"
+                  className="px-4 py-2 rounded-full font-medium border border-2 border-[#8B7355] text-[#8B7355] hover:bg-[#F5F1EE] transition-colors text-sm"
                 >
                   Learn More
                 </Link>
@@ -124,16 +124,25 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src={heroImage}
-                alt="Therapy Session"
+                src={linImage}
+                alt="Lin Garih - EQ Therapy"
                 fill
                 className="object-cover"
                 priority
               />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <Link
+                  href="/book?therapist=lin-garih"
+                  className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#503622] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
+                >
+                  Start Therapy with Lin
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
+                </Link>
+              </div>
             </motion.div>
           </div>
-            </div>
-          </section>
+        </div>
+      </section>
 
       {/* Primary Therapy Services Section */}
       <AnimatedSection className="py-20 bg-[#F5F1EE]">
@@ -181,54 +190,103 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
-            </div>
+        </div>
       </AnimatedSection>
 
       {/* Duplicate Services Section - Specialized Therapies */}
       <AnimatedSection id="services-section" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Specialized Services</h2>
+          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">EQ Treatment Goals</h2>
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="bg-[#F5F1EE] p-8 rounded-2xl shadow-sm"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {[
-              {
-                title: 'Career Counseling',
-                description: 'Navigate career transitions and overcome professional challenges.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2m4 4V4h-4v2z"/></svg>
-              },
-              {
-                title: 'Anxiety Management',
-                description: 'Build effective coping strategies for managing anxiety and stress.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5l-9-4m-2 8h2.5L12 7l-.5 2Zm4 9h-4c-.55 0-1-.45-1-1s.45-1 1-1v-4c-.55 0-1-.45-1-1s.45-1 1-1h4c.55 0 1 .45 1 1s-.45 1-1 1v4c.55 0 1 .45 1 1s-.45 1-1 1"/></svg>
-              },
-              {
-                title: 'Relationship Therapy',
-                description: 'Strengthen communication and heal relationship patterns.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="m12.1 18.55l-.1.1l-.11-.1C7.14 14.24 4 11.39 4 8.5C4 6.5 5.5 5 7.5 5c1.54 0 3.04 1 3.57 2.36h1.86C13.46 6 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5c0 2.89-3.14 5.74-7.9 10.05M16.5 3c-1.74 0-3.41.81-4.5 2.08C10.91 3.81 9.24 3 7.5 3C4.42 3 2 5.41 2 8.5c0 3.77 3.4 6.86 8.55 11.53L12 21.35l1.45-1.32C18.6 15.36 22 12.27 22 8.5C22 5.41 19.58 3 16.5 3"/></svg>
-              },
-              {
-                title: 'Entrepreneurial Leadership',
-                description: 'Balance professional growth with personal wellbeing in leadership roles.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M20 5h-3.2l1.6 8h-1.6l-1.6-8H4c-1.1 0-2 .9-2 2v8c0 2.8 2.2 5 5 5h13c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 13H7c-1.7 0-3-1.3-3-3v-6h16z"/></svg>
-              }
-            ].map((service, index) => (
-              <motion.div 
-                key={index} 
-                className="bg-[#F5F1EE] p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                variants={fadeIn}
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{service.title}</h3>
-                <p className="text-sm font-['Inter Medium'] text-[#503622]">{service.description}</p>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Reduce People-Pleasing Behaviors</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Develop healthier patterns of interaction and self-advocacy.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Avoid Conflict Avoidance</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Build confidence in addressing and resolving interpersonal challenges.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Increase Emotional Regulation</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Develop strategies for managing and understanding emotions effectively.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Raise Awareness on Distractibility</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Improve focus and attention through behavioral activation techniques.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Cognitive Reframing</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Transform intrusive thoughts through positive cognitive restructuring.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Unconscious Behavior Awareness</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Identify and modify patterns of automatic responses and behaviors.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Authentic Support System</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Build genuine connections and strengthen existing relationships.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Challenge Fear of Failure</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Develop resilience and confidence in facing rejection and setbacks.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Relationship Dynamics</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Navigate dating and relationship challenges with emotional intelligence.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Set Healthy Boundaries</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Establish and maintain clear boundaries with friends and family.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-[#503622] mt-2" />
+                  <div>
+                    <h3 className="text-lg font-['Instrument Sans'] text-[#503622] mb-1">Goal Setting</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#503622]">Create and achieve measurable goals for personal and professional growth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </AnimatedSection>
@@ -239,12 +297,12 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <Image
-                src={aboutImage}
-                alt="About EQ Therapy"
+                src={shadenImage}
+                alt="Shaden Alkhalifah - EQ Therapy"
                 fill
                 className="object-cover"
               />
-      </div>
+            </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-['Instrument Sans'] text-[#8B7355]">The EQ Method</h2>
               <p className="text-[#5C4D3C] font-['Inter Medium'] leading-relaxed">
@@ -273,15 +331,9 @@ export default function Home() {
                   </motion.div>
                 ))}
               </motion.div>
-              <Link
-                href="/about"
-                className="inline-block px-6 py-3 rounded-full bg-[#8B7355] text-white hover:bg-[#5C4D3C] transition-colors"
-              >
-                Learn More About Our Method
-              </Link>
             </div>
-  </div>
-  </div>
+          </div>
+        </div>
       </AnimatedSection>
 
       {/* CTA Section */}
@@ -299,7 +351,7 @@ export default function Home() {
           >
             Book Your First Session
           </Link>
-      </div>
+        </div>
       </AnimatedSection>
 
       <Footer />

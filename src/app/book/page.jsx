@@ -17,21 +17,6 @@ import seanImage from '../images/sean.png';
 
 const therapists = [
   {
-    id: 'eric-gutgarts',
-    name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
-    image: ericImage,
-    bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
-    specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
-    rate: '$399 per session',
-    availability: {
-      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
-      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
-      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
-      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
-    }
-  },
-  {
     id: 'lin-garih',
     name: 'Lin Garih',
     image: linImage,
@@ -68,7 +53,7 @@ const therapists = [
     image: elizabethImage,
     bio: "Elizabeth Zeck is a clinical intern at EQ Therapy and a graduate student at New York University, pursuing a master's degree in Mental Health Counseling. Elizabeth grew up in an international community, highlighting her focus on collaboration and exploration of an individual's personal background.",
     specialties: ['Life Transitions', 'Relationship Challenges', 'Emotional Regulation', 'Mindfulness'],
-    rate: 'Sliding Scale',
+    rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
     availability: {
       monday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
@@ -86,7 +71,7 @@ const therapists = [
     image: gianellaImage,
     bio: "Hi! I'm Gianella, a Counseling Intern working toward my Master's in Counseling for Mental Health and Wellness at NYU. I am dedicated to helping adolescents, young adults, and couples navigate anxiety, attachment, and relationship challenges.",
     specialties: ['Anxiety', 'Attachment Issues', 'Relationship Challenges', 'Young Adults'],
-    rate: 'Sliding Scale',
+    rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
     availability: {
       monday: ['9:00 AM', '10:00 AM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
@@ -102,7 +87,7 @@ const therapists = [
     image: jordanImage,
     bio: "Jordan is a mental health counseling intern earning her master's degree in Counseling for Mental Health and Wellness at New York University. She is passionate about providing client-centered care and creating an inclusive environment for individuals from diverse backgrounds.",
     specialties: ['LGBTQ+', 'College Students', 'Person-Centered Therapy', 'Narrative Therapy'],
-    rate: 'Sliding Scale',
+    rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
     availability: {
       monday: ['4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
@@ -117,7 +102,7 @@ const therapists = [
     image: seanImage,
     bio: "I am currently in my second year (Practicum II) of obtaining my Master's Degree in Clinical Mental Health Counseling at the University of Northern Colorado, following a B.A. in Psychology from the University of Colorado Boulder.",
     specialties: ['CBT', 'Mindfulness', 'African American Community', 'Young Adults'],
-    rate: 'Sliding Scale',
+    rate: 'Insurance Accepted',
     availability: {
       monday: ['3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
       tuesday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM'],
@@ -131,11 +116,27 @@ const therapists = [
     image: haydenImage,
     bio: "I am currently pursuing my master's degree in Mental Health Counseling and Wellness at New York University. My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness.",
     specialties: ['CBT', 'Psychodynamic', 'Trauma Healing', 'Self-Compassion'],
-    rate: 'Sliding Scale',
+    rate: 'Insurance Accepted',
     availability: {
       monday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
       wednesday: ['1:30 PM', '2:30 PM', '3:30 PM', '4:30 PM', '5:30 PM', '6:30 PM', '7:30 PM'],
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
+    }
+  }, 
+  {
+    id: 'eric-gutgarts',
+    name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
+    image: ericImage,
+    bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
+    specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
+    rate: 'Insurance Accepted',
+    availabilityNote: 'Availability is limited for my caseload',
+    availability: {
+      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
+      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
+      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
     }
   }
 ];

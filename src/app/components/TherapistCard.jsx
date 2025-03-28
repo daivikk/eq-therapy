@@ -68,6 +68,12 @@ export default function TherapistCard({ therapist }) {
           </div>
         )}
         
+        {therapist.availabilityNote && (
+          <div className="text-sm text-[#8B7355] italic">
+            {therapist.availabilityNote}
+          </div>
+        )}
+        
         <Link
           href={`/book/${therapist.id}`}
           className="inline-block w-full text-center px-4 py-2 rounded-full bg-[#503622] text-white hover:bg-[#8B7355] transition-colors mt-4"
