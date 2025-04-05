@@ -103,6 +103,7 @@ const therapists = [
     bio: "I am currently in my second year (Practicum II) of obtaining my Master's Degree in Clinical Mental Health Counseling at the University of Northern Colorado, following a B.A. in Psychology from the University of Colorado Boulder.",
     specialties: ['CBT', 'Mindfulness', 'African American Community', 'Young Adults'],
     rate: 'Insurance Accepted',
+    availableFrom: 'May 2025',
     availability: {
       monday: ['3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
       tuesday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM'],
@@ -117,6 +118,7 @@ const therapists = [
     bio: "I am currently pursuing my master's degree in Mental Health Counseling and Wellness at New York University. My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness.",
     specialties: ['CBT', 'Psychodynamic', 'Trauma Healing', 'Self-Compassion'],
     rate: 'Insurance Accepted',
+    availableFrom: 'May 2025',
     availability: {
       monday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
       wednesday: ['1:30 PM', '2:30 PM', '3:30 PM', '4:30 PM', '5:30 PM', '6:30 PM', '7:30 PM'],
