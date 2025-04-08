@@ -101,7 +101,12 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                EQ Therapy specializes in working with high-performing professionals through evidence-based therapy approaches. We help you develop emotional intelligence and achieve your goals.
+                <p className="mb-6">
+                  EQ Therapy is a Telehealth private practice that specializes in working with high-performing professionals in NY, CT, and CO. If you're someone who want to increase awareness on people-pleasing behaviors, distractibility, goal orientation, emotional regulation, resilience, cognitive reframing, self-assertiveness, conflict avoidance, authenticity, boundary-setting, and other areas associated with emotional intelligence, EQ Therapy is the right fit for you.
+                </p>
+                <p>
+                  Many clients who seek counseling services from EQ Therapy are highly-analytical and want to use an evidence-based orientation in therapy. You will work to develop measurable and achievable goals, strengthening rapport and accountability with your therapist so you can accomplish your goals with identity development, interpersonal relationships, and professional trajectory. Don't waste anytime - schedule your first session with one of our therapists this week!
+                </p>
               </motion.p>
               <motion.div 
                 className="flex gap-4"
@@ -114,12 +119,6 @@ export default function Home() {
                   className="px-4 py-2 rounded-full bg-[#503622] font-medium text-white hover:bg-[#5C4D3C] transition-colors text-sm"
                 >
                   Book a Session
-                </Link>
-                <Link
-                  href="/about"
-                  className="px-4 py-2 rounded-full font-medium border border-2 border-[#8B7355] text-[#8B7355] hover:bg-[#F5F1EE] transition-colors text-sm"
-                >
-                  Learn More
                 </Link>
               </motion.div>
             </motion.div>
@@ -138,7 +137,7 @@ export default function Home() {
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                 <Link
-                  href="/book?therapist=lin-garih"
+                  href="/therapists/lin-garih"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#503622] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
                   Start Therapy with Lin
@@ -163,7 +162,7 @@ export default function Home() {
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                 <Link
-                  href="/book?therapist=shaden-alkhalifah"
+                  href="/therapists/shaden-alkhalifah"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#503622] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
                   Start Therapy with Shaden
@@ -171,34 +170,23 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-3xl font-['Instrument Sans'] text-[#8B7355]">The EQ Method</h2>
-              <p className="text-[#5C4D3C] font-['Inter Medium'] leading-relaxed">
-                Our unique approach combines psychodynamic therapy, cognitive behavioral therapy, interpersonal psychotherapy, and solution-focused therapy to create a comprehensive treatment plan tailored to your needs.
+            <div className="space-y-4">
+              <h2 className="text-2xl font-['Instrument Sans'] text-[#8B7355]">The EQ Method</h2>
+              <p className="text-[#5C4D3C] font-['Inter Medium'] text-sm leading-relaxed">
+                The EQ Method uses a model of utilizing evidence-based theoretical orientations to increase your capacity to develop profound self-concept that can be an indisputable strength in accomplishing your personal goals. Therapists are trained to be working with clients who already have emotional awareness, social skills, professional acumen, and most importantly, the ability to keep themselves accountable based on their intelligence. Throughout therapy, you will go through three phases:
               </p>
-              <motion.div 
-                className="space-y-4"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                {[
-                  '1-3 months: Psychodynamic Therapy',
-                  '4-6 months: Cognitive Behavioral Therapy',
-                  '7-9 months: Interpersonal Psychotherapy',
-                  '10-12 months: Solution-Focused Therapy'
-                ].map((phase, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="flex items-center gap-3"
-                    variants={fadeIn}
-                  >
-                    <div className="w-2 h-2 rounded-full bg-[#8B7355]" />
-                    <p className="text-[#5C4D3C] font-['Inter Medium']">{phase}</p>
-                  </motion.div>
-                ))}
-              </motion.div>
+              <h3 className="text-lg font-['Instrument Sans'] text-[#8B7355]">Phase 1: Psychodynamic Therapy</h3>
+              <p className="text-[#5C4D3C] font-['Inter Medium'] text-sm leading-relaxed">
+                You will start your therapeutic journey by understanding what fears and anxieties are influencing thought patterns and emotional responses. With a psychodynamic approach in the beginning of treatment, you can become more conscious of behaviors are rooted in the unconscious and how they relate to experiences in the here-and-now. Intrusive thought patterns will be identified while consistent themes will be focused on with cognitive challenging and rationalization techniques. Relationships will be explored through social, family, romantic, and professional contexts. You will aim to make meaning of past experiences, and process anything that may still be affecting you today.
+              </p>
+              <h3 className="text-lg font-['Instrument Sans'] text-[#8B7355]">Phase 2: Cognitive Behavioral Therapy</h3>
+              <p className="text-[#5C4D3C] font-['Inter Medium'] text-sm leading-relaxed">
+                In the next stage of your therapeutic journey, you will use cognitive-behavioral approach to begin making the changes you want to see in your life. Interpersonally, this would result in changing expectations and setting boundaries. Professionally, this would result in advocating for what you want or pursuing what makes you most fulfilled in life. Romantically, this would result in self awareness and transparency with what you want and what it looks like. Personality, this would result in focusing less on constructs that you can't control and feeling empowered by the way you begin to control the next chapters of your life.
+              </p>
+              <h3 className="text-lg font-['Instrument Sans'] text-[#8B7355]">Phase 3: Solution Focused Approach</h3>
+              <p className="text-[#5C4D3C] font-['Inter Medium'] text-sm leading-relaxed">
+                With the integration of solution-focused therapy, progress will be revisited frequently, clients will be able to feel "in the driver's seat" with the direction of their treatment plan, and clinical approaches will be used in accordance with each client's treatment goals. The EQ Clinical Team is passionate about helping clients accomplish what they want to see change at the end of their therapy. They specialize in areas where high-performing professionals experience hardships like perfectionism, ADHD management, rumination or spiraling thought patterns, seeking the approval of others, and more.
+              </p>
             </div>
           </div>
         </div>
@@ -252,11 +240,6 @@ export default function Home() {
                 icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
               },
               {
-                title: 'Graduate Students',
-                description: 'Support for advanced students managing academic and personal pressures.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72L5.18 9L12 5.28L18.82 9M17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-              },
-              {
                 title: 'Medical Professionals',
                 description: 'Therapy for healthcare workers managing stress and burnout.',
                 icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 2L2 7v10l10 5l10-5V7L12 2m0 2.5L20 9v6l-8 4l-8-4V9l8-4.5M12 11a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6.5c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
@@ -265,11 +248,6 @@ export default function Home() {
                 title: 'Educators',
                 description: 'Support for teachers and educational professionals.',
                 icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72L5.18 9L12 5.28L18.82 9M17 15.99l-5 2.73l-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
-              },
-              {
-                title: 'Aspirational Individuals',
-                description: 'Guidance for those seeking personal growth and development.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#503622" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
               }
             ].map((service, index) => (
               <motion.div 
@@ -291,7 +269,7 @@ export default function Home() {
       {/* Team Section */}
       <AnimatedSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Meet Our Team</h2>
+          <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Meet Our Therapists</h2>
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={staggerContainer}
@@ -304,76 +282,78 @@ export default function Home() {
                 name: 'Lin Garih',
                 image: linImage,
                 role: 'Therapist',
-                specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma']
+                specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
+                profileLink: '/therapists/lin-garih'
               },
               {
                 name: 'Shaden Alkhalifah',
                 image: shadenImage,
                 role: 'Therapist',
-                specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health']
+                specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
+                profileLink: '/therapists/shaden-alkhalifah'
               },
               {
                 name: 'Elizabeth Zeck',
                 image: elizabethImage,
                 role: 'Therapist',
-                specialties: ['Life Transitions', 'Relationship Challenges', 'Emotional Regulation']
+                specialties: ['Life Transitions', 'Relationship Challenges', 'Emotional Regulation'],
+                profileLink: '/therapists/elizabeth-zeck'
               },
               {
                 name: 'Gianella Lombardi',
                 image: gianellaImage,
                 role: 'Therapist',
-                specialties: ['Anxiety', 'Attachment Issues', 'Relationship Challenges']
+                specialties: ['Anxiety', 'Attachment Issues', 'Relationship Challenges'],
+                profileLink: '/therapists/gianella-lombardi'
               },
               {
                 name: 'Jordan White',
                 image: jordanImage,
                 role: 'Therapist',
-                specialties: ['LGBTQ+', 'College Students', 'Person-Centered Therapy']
+                specialties: ['LGBTQ+', 'College Students', 'Person-Centered Therapy'],
+                profileLink: '/therapists/jordan-white'
               },
               {
                 name: 'Hayden Herter',
                 image: haydenImage,
                 role: 'Therapist',
-                specialties: ['CBT', 'Psychodynamic', 'Trauma Healing']
+                specialties: ['CBT', 'Psychodynamic', 'Trauma Healing'],
+                profileLink: '/therapists/hayden-herter'
               },
               {
                 name: 'Sean Ash',
                 image: seanImage,
                 role: 'Therapist',
-                specialties: ['CBT', 'Mindfulness', 'African American Community']
-              },
-              {
-                name: 'Dr. Eric Gutgarts',
-                image: ericImage,
-                role: 'Founder & Clinical Director',
-                specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy']
+                specialties: ['CBT', 'Mindfulness', 'African American Community'],
+                profileLink: '/therapists/sean-ash'
               }
             ].map((member, index) => (
-              <motion.div 
-                key={index} 
-                className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                variants={fadeIn}
-                whileHover={{ y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className={`object-cover ${['Elizabeth Zeck', 'Jordan White', 'Hayden Herter', 'Sean Ash', 'Dr. Eric Gutgarts'].includes(member.name) ? 'object-[center_30%]' : 'object-center'}`}
-                  />
-                </div>
-                <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{member.name}</h3>
-                <p className="text-sm font-['Inter Medium'] text-[#8B7355] mb-4">{member.role}</p>
-                <div className="flex flex-wrap gap-2">
-                  {member.specialties.map((specialty, i) => (
-                    <span key={i} className="px-3 py-1 bg-[#F5F1EE] text-[#503622] rounded-full text-xs">
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+              <Link href={member.profileLink} key={index}>
+                <motion.div 
+                  className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+                  variants={fadeIn}
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className={`object-cover ${member.name === 'Shaden Alkhalifah' ? 'object-[center_40%]' : member.name === 'Jordan White' || member.name === 'Sean Ash' ? 'object-[center_10%]' : member.name === 'Hayden Herter' || member.name === 'Elizabeth Zeck' ? 'object-[center_25%]' : 'object-center'}`}
+                    />
+                  </div>
+                  <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{member.name}</h3>
+                  <p className="text-sm font-['Inter Medium'] text-[#8B7355] mb-4">{member.role}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.specialties.map((specialty, i) => (
+                      <span key={i} className="px-3 py-1 bg-[#F5F1EE] text-[#503622] rounded-full text-xs">
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </motion.div>
         </div>

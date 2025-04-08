@@ -1,20 +1,20 @@
 'use client';
-import { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import TherapistCard from '../components/TherapistCard';
-import AppointmentScheduler from '../components/AppointmentScheduler';
-import Image from 'next/image';
-import ericImage from '../images/eric.png';
-import linImage from '../images/lin.png';
-import shadenImage from '../images/shaden.png';
-import elizabethImage from '../images/elizabeth.png';
-import gianellaImage from '../images/gianella.png';
-import jordanImage from '../images/jordan.png';
-import haydenImage from '../images/hayden.png';
-import seanImage from '../images/sean.png';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import TherapistCard from '../../components/TherapistCard';
+import AppointmentScheduler from '../../components/AppointmentScheduler';
 import Link from 'next/link';
-
+import Image from 'next/image';
+import ericImage from '../../images/eric.png';
+import linImage from '../../images/lin.png';
+import shadenImage from '../../images/shaden.png';
+import elizabethImage from '../../images/elizabeth.png';
+import gianellaImage from '../../images/gianella.png';
+import jordanImage from '../../images/jordan.png';
+import haydenImage from '../../images/hayden.png';
+import seanImage from '../../images/sean.png';
 
 const therapists = [
   {
@@ -126,32 +126,57 @@ const therapists = [
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
   }, 
-  // {
-  //   id: 'eric-gutgarts',
-  //   name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
-  //   image: ericImage,
-  //   bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
-  //   specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
-  //   rate: 'Insurance Accepted',
-  //   availabilityNote: 'Availability is limited for my caseload',
-  //   availability: {
-  //     monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
-  //     tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
-  //     wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
-  //     thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-  //     friday: ['1:00 PM', '2:00 PM', '3:00 PM']
-  //   }
-  // }
+//   {
+//     id: 'eric-gutgarts',
+//     name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
+//     image: ericImage,
+//     bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
+//     specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
+//     rate: 'Insurance Accepted',
+//     availabilityNote: 'Availability is limited for my caseload',
+//     availability: {
+//       monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+//       tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
+//       wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
+//       thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
+//       friday: ['1:00 PM', '2:00 PM', '3:00 PM']
+//     }
+//   }
 ];
 
-export default function BookPage() {
-  const [selectedTherapist, setSelectedTherapist] = useState(null);
-  const [filterStartingMay, setFilterStartingMay] = useState(false);
+export default function TherapistProfile() {
+  const params = useParams();
+  const [therapist, setTherapist] = useState(null);
 
-  // Filter therapists based on availability
-  const filteredTherapists = filterStartingMay 
-    ? therapists.filter(t => t.availableFrom === 'May 2025')
-    : therapists.filter(t => !t.availableFrom);
+  useEffect(() => {
+    const foundTherapist = therapists.find(t => t.id === params.id);
+    setTherapist(foundTherapist);
+  }, [params.id]);
+
+  if (!therapist) {
+    return (
+      <div className="min-h-screen bg-white font-['Inter']">
+        <Navigation />
+        <main className="pt-32 pb-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl font-medium text-[#503622] mb-4">
+              Therapist Not Found
+            </h1>
+            <p className="text-[#5C4D3C] mb-8">
+              The therapist you're looking for could not be found.
+            </p>
+            <Link
+              href="/book"
+              className="inline-block px-4 py-2 rounded-full bg-[#503622] text-white hover:bg-[#8B7355] transition-colors"
+            >
+              Back to All Therapists
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white font-['Inter']">
@@ -159,90 +184,20 @@ export default function BookPage() {
 
       <main className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-medium text-[#503622] text-center mb-4">
-            Book an Appointment
-          </h1>
-          <p className="text-[#5C4D3C] text-center mb-8 max-w-2xl mx-auto">
-            Choose a therapist and schedule your session at a time that works best for you.
-          </p>
-
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex rounded-md shadow-sm" role="group">
-              <button
-                onClick={() => setFilterStartingMay(false)}
-                className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
-                  !filterStartingMay
-                    ? 'bg-[#503622] text-white'
-                    : 'bg-white text-[#503622] border border-[#503622]'
-                }`}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <TherapistCard therapist={therapist} />
+              <Link
+                href="/book"
+                className="mt-4 w-full px-4 py-2 rounded-full border border-[#503622] text-[#503622] hover:bg-[#F5F1EE] transition-colors text-center block"
               >
-                Currently Available
-              </button>
-              <button
-                onClick={() => setFilterStartingMay(true)}
-                className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
-                  filterStartingMay
-                    ? 'bg-[#503622] text-white'
-                    : 'bg-white text-[#503622] border border-[#503622]'
-                }`}
-              >
-                Starting May 2025
-              </button>
+                Back to All Therapists
+              </Link>
+            </div>
+            <div>
+              <AppointmentScheduler therapist={therapist} />
             </div>
           </div>
-
-          {selectedTherapist ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <TherapistCard therapist={selectedTherapist} />
-                <Link
-                  href="/book"
-                  className="mt-4 w-full px-4 py-2 rounded-full border border-[#503622] text-[#503622] hover:bg-[#F5F1EE] transition-colors text-center block"
-                >
-                  Back to All Therapists
-                </Link>
-              </div>
-              <div>
-                <AppointmentScheduler therapist={selectedTherapist} />
-              </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTherapists.map((therapist) => (
-                <Link
-                  key={therapist.id}
-                  href={`/therapists/${therapist.id}`}
-                  className="text-left"
-                >
-                  <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
-                      <Image
-                        src={therapist.image}
-                        alt={therapist.name}
-                        fill
-                        className={`object-cover ${
-                          therapist.id === 'elizabeth-zeck' ? 'object-[center_40%]' :
-                          therapist.id === 'jordan-white' ? 'object-[center_40%]' :
-                          therapist.id === 'sean-ash' ? 'object-[center_40%]' :
-                          therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
-                          'object-center'
-                        }`}
-                      />
-                    </div>
-                    <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{therapist.name}</h3>
-                    <p className="text-sm font-['Inter Medium'] text-[#8B7355] mb-4">{therapist.bio}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {therapist.specialties.map((specialty, i) => (
-                        <span key={i} className="px-3 py-1 bg-[#F5F1EE] text-[#503622] rounded-full text-xs">
-                          {specialty}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
         </div>
       </main>
 

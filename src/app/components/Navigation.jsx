@@ -83,10 +83,8 @@ export default function Navigation() {
 
   // Navigation items with section IDs for scrolling
   const navItems = [
-    { name: 'Services', action: () => scrollToSection('services-section') },
-    { name: 'About', action: () => scrollToSection('about-section') },
-    { name: 'Our Team', href: '/book' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Clinical Team', href: '/book' },
+    { name: 'Leadership Team', href: '/contact' }
   ];
 
   return (
@@ -205,10 +203,8 @@ export default function Navigation() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
               {[
-                { name: 'About', action: () => scrollToSection('about-section') },
-                { name: 'Services', action: () => scrollToSection('services-section') },
-                { name: 'Our Team', href: '/book' },
-                { name: 'Contact', href: '/contact' },
+                { name: 'Clinical Team', href: '/book' },
+                { name: 'Leadership Team', href: '/contact' },
                 { name: 'Book Appointment', href: '/book' }
               ].map((item, index) => (
                 <motion.div

@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="font-medium text-[#8B7355]">Contact</h4>
             <p className="text-sm text-[#5C4D3C]">
-              Email: gutgarts@eqtherapy.co
+              Email:  admin@eqtherapy.co
             </p>
             <p className="text-sm text-[#5C4D3C]">
               Locations: NY, CT, and CO
