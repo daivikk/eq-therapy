@@ -27,41 +27,6 @@ export default function Contact() {
           </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Megan's Profile */}
-            <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-sm"
-              initial="hidden"
-              animate="visible"
-              variants={fadeIn}
-            >
-              <div className="relative h-64 w-full mb-6 rounded-xl overflow-hidden">
-                <Image
-                  src={meganImage}
-                  alt="Megan - Co-Founder"
-                  fill
-                  className="object-cover object-[center_30%]"
-                />
-              </div>
-              <h2 className="text-2xl font-['Instrument Sans'] text-[#503622] mb-3">Megan</h2>
-              <p className="text-lg text-[#8B7355] mb-4">Co-Founder & CEO</p>
-              <div className="space-y-4 text-[#5C4D3C]">
-                <p>Founder of CoinX, Inc. a U.S.-based Fintech Company that specializes in international payment aggregation, processing, and transfer services. Providing customers and partners with enterprise-level transaction monitoring and a processing platform that offers a wide array of payment routing, settlement services, transaction monitoring, and compliance to 3rd party financial networks for onward settlement.</p>
-                <p>Prior to CoinX, Megan spent more than fifteen years in security consulting in the financial sector. As the former founder and CEO of SeeGee Technologies, successful internet security, and networking company that provides service to a number of Fortune 1000 Companies consulting on security for the protection of highly sensitive consumer information. SeeGee still provides auditing services and assists high-profile payment card industry clients to meet compliance standards surrounding PCI, GLBA, and SOX.</p>
-                <p>Served as a member of the board for a Georgia-based bank and Chairman of YPO Atlanta. Incoming President of EO. Consultant to Federal Reserve Bank, founded a financial institution in 46 US states, testified before senate hearing CSBS task force regarding financial crimes and compliance.</p>
-              </div>
-              <div className="mt-6">
-                <div className="text-[#8B7355] font-medium mb-2">Availability</div>
-                <div className="grid grid-cols-2 gap-2">
-                  {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => (
-                    <div key={day} className="bg-[#F5F1EE] p-3 rounded-lg">
-                      <div className="text-[#503622] font-medium">{day}</div>
-                      <div className="text-sm text-[#8B7355]">9:00 AM - 5:00 PM</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
             {/* Eric's Profile */}
             <motion.div 
               className="bg-white p-8 rounded-2xl shadow-sm"
@@ -91,6 +56,41 @@ export default function Contact() {
                     <div key={day} className="bg-[#F5F1EE] p-3 rounded-lg">
                       <div className="text-[#503622] font-medium">{day}</div>
                       <div className="text-sm text-[#8B7355]">2:00 PM - 4:00 PM</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+            
+            {/* Megan's Profile */}
+            <motion.div 
+              className="bg-white p-8 rounded-2xl shadow-sm"
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+            >
+              <div className="relative h-64 w-full mb-6 rounded-xl overflow-hidden">
+                <Image
+                  src={meganImage}
+                  alt="Megan - Co-Founder"
+                  fill
+                  className="object-cover object-[center_30%]"
+                />
+              </div>
+              <h2 className="text-2xl font-['Instrument Sans'] text-[#503622] mb-3">Megan Burton</h2>
+              <p className="text-lg text-[#8B7355] mb-4">Co-Founder and Executive Director</p>
+              <div className="space-y-4 text-[#5C4D3C]">
+                <p>Founder of CoinX, Inc. a U.S.-based Fintech Company that specializes in international payment aggregation, processing, and transfer services. Providing customers and partners with enterprise-level transaction monitoring and a processing platform that offers a wide array of payment routing, settlement services, transaction monitoring, and compliance to 3rd party financial networks for onward settlement.</p>
+                <p>Prior to CoinX, Megan spent more than fifteen years in security consulting in the financial sector. As the former founder and CEO of SeeGee Technologies, successful internet security, and networking company that provides service to a number of Fortune 1000 Companies consulting on security for the protection of highly sensitive consumer information. SeeGee still provides auditing services and assists high-profile payment card industry clients to meet compliance standards surrounding PCI, GLBA, and SOX.</p>
+                <p>Served as a member of the board for a Georgia-based bank and Chairman of YPO Atlanta. Incoming President of EO. Consultant to Federal Reserve Bank, founded a financial institution in 46 US states, testified before senate hearing CSBS task force regarding financial crimes and compliance.</p>
+              </div>
+              <div className="mt-6">
+                <div className="text-[#8B7355] font-medium mb-2">Availability</div>
+                <div className="grid grid-cols-2 gap-2">
+                  {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'].map((day) => (
+                    <div key={day} className="bg-[#F5F1EE] p-3 rounded-lg">
+                      <div className="text-[#503622] font-medium">{day}</div>
+                      <div className="text-sm text-[#8B7355]">9:00 AM - 5:00 PM</div>
                     </div>
                   ))}
                 </div>

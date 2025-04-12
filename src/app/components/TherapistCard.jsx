@@ -5,12 +5,21 @@ import Link from 'next/link';
 export default function TherapistCard({ therapist, imagePosition = 'object-center' }) {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-      <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
+      <div className="relative h-[300px] w-full mb-4 rounded-lg overflow-hidden">
         <Image
           src={therapist.image}
           alt={therapist.name}
           fill
-          className={`object-cover ${imagePosition}`}
+          className={`object-cover ${
+            therapist.id === 'elizabeth-zeck' ? 'object-[center_40%]' :
+            therapist.id === 'jordan-white' ? 'object-[center_40%]' :
+            therapist.id === 'sean-ash' ? 'object-[center_40%]' :
+            therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
+            therapist.id === 'shaden-alkhalifah' ? 'object-[center_30%]' :
+            therapist.id === 'megan-burton' ? 'object-[center_30%]' :
+            therapist.id === 'eric-gutgarts' ? 'object-[center_25%]' :
+            'object-center'
+          }`}
         />
       </div>
       <div className="p-6">

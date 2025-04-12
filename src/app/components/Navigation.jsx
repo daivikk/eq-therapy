@@ -153,7 +153,7 @@ export default function Navigation() {
                 href="/book" 
                 className="px-4 py-2 rounded-full bg-[#503622] text-white hover:bg-[#8B7355] transition-colors"
               >
-                Book Appointment
+                Book a Session
               </Link>
             </motion.div>
           </div>
@@ -205,7 +205,7 @@ export default function Navigation() {
               {[
                 { name: 'Clinical Team', href: '/book' },
                 { name: 'Leadership Team', href: '/contact' },
-                { name: 'Book Appointment', href: '/book' }
+                { name: 'Book a Session', href: '/book' }
               ].map((item, index) => (
                 <motion.div
                   key={item.name}

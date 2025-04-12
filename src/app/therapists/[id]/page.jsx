@@ -15,6 +15,7 @@ import gianellaImage from '../../images/gianella.png';
 import jordanImage from '../../images/jordan.png';
 import haydenImage from '../../images/hayden.png';
 import seanImage from '../../images/sean.png';
+import meganImage from '../../images/megan.png';
 
 const therapists = [
   {
@@ -116,7 +117,7 @@ const therapists = [
     id: 'hayden-herter',
     name: 'Hayden Herter',
     image: haydenImage,
-    bio: "I am currently pursuing my master's degree in Mental Health Counseling and Wellness at New York University. My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness.",
+    bio: "My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness, challenge unhelpful thought patterns, and develop effective coping strategies. I understand that every person is unique which is why I work collaboratively with clients to develop a strategy that supports their personalities, histories, values, needs and goals. My work is rooted in promorting self-compassion, resilience, and self-awareness, empowering clients to break free from past patterns and move forward with confidence. I believe that healing is not linear, and together we will celebrate progress while addressing challenges with curiosity and care. Whether you’re seeking support to heal from trauma or guidance on building healthier relationships, I am here to help you create lasting change.",
     specialties: ['CBT', 'Psychodynamic', 'Trauma Healing', 'Self-Compassion'],
     rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
@@ -125,23 +126,39 @@ const therapists = [
       wednesday: ['1:30 PM', '2:30 PM', '3:30 PM', '4:30 PM', '5:30 PM', '6:30 PM', '7:30 PM'],
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
-  }, 
-//   {
-//     id: 'eric-gutgarts',
-//     name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
-//     image: ericImage,
-//     bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
-//     specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
-//     rate: 'Insurance Accepted',
-//     availabilityNote: 'Availability is limited for my caseload',
-//     availability: {
-//       monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
-//       tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
-//       wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
-//       thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-//       friday: ['1:00 PM', '2:00 PM', '3:00 PM']
-//     }
-//   }
+  },
+  {
+    id: 'megan-burton',
+    name: 'Megan Burton',
+    image: meganImage,
+    bio: "Your journey toward healing begins with a single step. As a therapist—and former executive—I understand both the high-pressure demands of leadership and the emotional challenges that come with life transitions, trauma, and relationship struggles. I bring a unique perspective of professional insight and clinical expertise to our work, creating a warm, nonjudgmental space where you can reconnect with your inner wisdom and move toward meaningful change.With specialized training in relationship dynamics, betrayal recovery, and mind-body integration, I support individuals and couples navigating anxiety, burnout, communication breakdowns, intimacy concerns, and compulsive sexual behaviors. As a CSAT Level One trained therapist, I bring a compassionate, structured approach to working with those affected by sex and love addiction.",
+    specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
+    rate: 'Insurance Accepted',
+    availableFrom: 'August 2025',
+    availability: {
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM']
+    }
+  },
+  {
+    id: 'eric-gutgarts',
+    name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
+    image: ericImage,
+    bio: "Therapy is an opportunity for you to raise awareness about yourself, your relationship with others, and your view of the world. When we begin working together, you can start changing circumstances that are in your control, and find ways to focus less on factors that are out of your control. To me, therapy is a safe space to be vulnerable and intentional with what you hope to accomplish. Using CBT as a framework, we will explore coping methods that can help you improve interpersonal relationships, reduce symptoms of anxiety or depression, challenge intrusive thoughts, increase self-determination, adopt a growth mindset, and commit to structured goals. I remain flexible with therapeutic approaches to meet clients' individual needs. Let's get this process started together!",
+    specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
+    rate: '$499 per session',
+    availabilityNote: 'Availability is limited for my caseload',
+    availability: {
+      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
+      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
+      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
+    }
+  }
 ];
 
 export default function TherapistProfile() {

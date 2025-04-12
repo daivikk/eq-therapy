@@ -14,6 +14,7 @@ import jordanImage from '../images/jordan.png';
 import haydenImage from '../images/hayden.png';
 import seanImage from '../images/sean.png';
 import Link from 'next/link';
+import meganImage from '../images/megan.png';
 
 
 const therapists = [
@@ -125,23 +126,39 @@ const therapists = [
       wednesday: ['1:30 PM', '2:30 PM', '3:30 PM', '4:30 PM', '5:30 PM', '6:30 PM', '7:30 PM'],
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
-  }, 
-  // {
-  //   id: 'eric-gutgarts',
-  //   name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
-  //   image: ericImage,
-  //   bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
-  //   specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
-  //   rate: 'Insurance Accepted',
-  //   availabilityNote: 'Availability is limited for my caseload',
-  //   availability: {
-  //     monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
-  //     tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
-  //     wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
-  //     thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-  //     friday: ['1:00 PM', '2:00 PM', '3:00 PM']
-  //   }
-  // }
+  },
+  {
+    id: 'megan-burton',
+    name: 'Megan Burton',
+    image: meganImage,
+    bio: "I am passionate about helping clients develop emotional intelligence and achieve their personal and professional goals. With a background in both clinical psychology and business, I bring a unique perspective to therapy that combines evidence-based practices with practical strategies for success. My approach is collaborative and tailored to each client's needs, focusing on developing self-awareness, managing emotions effectively, and building meaningful relationships. I specialize in working with high-performing professionals who are looking to enhance their emotional intelligence and achieve their full potential.",
+    specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
+    rate: 'Insurance Accepted',
+    availableFrom: 'August 2025',
+    availability: {
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM']
+    }
+  },
+  {
+    id: 'eric-gutgarts',
+    name: 'Dr. Eric Gutgarts, Ed.D., LPC, LMHC',
+    image: ericImage,
+    bio: "Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University.",
+    specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
+    rate: '$499 per session',
+    availabilityNote: 'Availability is limited for my caseload',
+    availability: {
+      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
+      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
+      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
+    }
+  }
 ];
 
 export default function BookPage() {
@@ -160,7 +177,7 @@ export default function BookPage() {
       <main className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-medium text-[#503622] text-center mb-4">
-            Book an Appointment
+            Book a Session
           </h1>
           <p className="text-[#5C4D3C] text-center mb-8 max-w-2xl mx-auto">
             Choose a therapist and schedule your session at a time that works best for you.
@@ -215,7 +232,7 @@ export default function BookPage() {
                   className="text-left"
                 >
                   <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
+                    <div className="relative h-[300px] w-full mb-4 rounded-lg overflow-hidden">
                       <Image
                         src={therapist.image}
                         alt={therapist.name}
@@ -225,6 +242,7 @@ export default function BookPage() {
                           therapist.id === 'jordan-white' ? 'object-[center_40%]' :
                           therapist.id === 'sean-ash' ? 'object-[center_40%]' :
                           therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
+                          therapist.id === 'shaden-alkhalifah' ? 'object-[center_30%]' :
                           'object-center'
                         }`}
                       />

@@ -45,7 +45,7 @@ export default function Footer() {
               href="/book" 
               className="inline-block px-4 py-2 rounded-full bg-[#8B7355] text-white hover:bg-[#5C4D3C] transition-colors text-sm"
             >
-              Book Appointment
+              Book a Session
             </Link>
           </div>
         </div>
