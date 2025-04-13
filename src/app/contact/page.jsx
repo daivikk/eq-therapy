@@ -34,15 +34,15 @@ export default function Contact() {
               animate="visible"
               variants={fadeIn}
             >
-              <div className="relative h-64 w-full mb-6 rounded-xl overflow-hidden">
+              <div className="relative h-80 w-full mb-6 rounded-xl overflow-hidden">
                 <Image
                   src={ericImage}
                   alt="Dr. Eric Gutgarts"
                   fill
-                  className="object-cover object-[center_30%]"
+                  className="object-cover object-[center_25%]"
                 />
               </div>
-              <h2 className="text-2xl font-['Instrument Sans'] text-[#503622] mb-3">Dr. Eric Gutgarts, Ed.D., LPC, LMHC</h2>
+              <h2 className="text-2xl font-['Instrument Sans'] text-[#503622] mb-3">Dr. Eric Gutgarts</h2>
               <p className="text-lg text-[#8B7355] mb-4">Co-Founder & Clinical Director</p>
               <div className="space-y-4 text-[#5C4D3C]">
                 <p>Dr. Eric Gutgarts is an Extended Learning Mentor at Johns Hopkins University, and teaches in graduate counseling programs at New York University and the University of Northern Colorado. He received his master's degree in mental health counseling from NYU and his doctorate in Entrepreneurial Leadership from Johns Hopkins University. He uses a cognitive-behavioral orientation with solution-focused and psychodynamic approaches to meet clients' needs.</p>
@@ -61,7 +61,7 @@ export default function Contact() {
                 </div>
               </div>
             </motion.div>
-            
+
             {/* Megan's Profile */}
             <motion.div 
               className="bg-white p-8 rounded-2xl shadow-sm"
@@ -69,12 +69,12 @@ export default function Contact() {
               animate="visible"
               variants={fadeIn}
             >
-              <div className="relative h-64 w-full mb-6 rounded-xl overflow-hidden">
+              <div className="relative h-80 w-full mb-6 rounded-xl overflow-hidden">
                 <Image
                   src={meganImage}
                   alt="Megan - Co-Founder"
                   fill
-                  className="object-cover object-[center_30%]"
+                  className="object-cover object-[center_10%]"
                 />
               </div>
               <h2 className="text-2xl font-['Instrument Sans'] text-[#503622] mb-3">Megan Burton</h2>

@@ -5,19 +5,20 @@ import Link from 'next/link';
 export default function TherapistCard({ therapist, imagePosition = 'object-center' }) {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-      <div className="relative h-[300px] w-full mb-4 rounded-lg overflow-hidden">
+      <div className="relative h-[400px] w-full mb-4 rounded-lg overflow-hidden">
         <Image
           src={therapist.image}
           alt={therapist.name}
           fill
           className={`object-cover ${
-            therapist.id === 'elizabeth-zeck' ? 'object-[center_40%]' :
-            therapist.id === 'jordan-white' ? 'object-[center_40%]' :
-            therapist.id === 'sean-ash' ? 'object-[center_40%]' :
+            therapist.id === 'elizabeth-zeck' ? 'object-[center_15%]' :
+            therapist.id === 'jordan-white' ? 'object-[center_1%]' :
+            therapist.id === 'sean-ash' ? 'object-[center_10%]' :
             therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
-            therapist.id === 'shaden-alkhalifah' ? 'object-[center_30%]' :
-            therapist.id === 'megan-burton' ? 'object-[center_30%]' :
+            therapist.id === 'shaden-alkhalifah' ? 'object-[center_20%]' :
+            therapist.id === 'megan-burton' ? 'object-[center_10%]' :
             therapist.id === 'eric-gutgarts' ? 'object-[center_25%]' :
+            therapist.id === 'gianella-lombardi' ? 'object-[center_20%]' :
             'object-center'
           }`}
         />
@@ -27,7 +28,7 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
           {therapist.name}
         </h3>
         <p className="text-[#5C4D3C] mb-4">{therapist.bio}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* <div className="flex flex-wrap gap-2 mb-4">
           {therapist.specialties.map((specialty, index) => (
             <span
               key={index}
@@ -36,7 +37,7 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
               {specialty}
             </span>
           ))}
-        </div>
+        </div> */}
         <div className="flex justify-between items-center">
           <span className="text-[#503622] font-medium">{therapist.rate}</span>
           {therapist.availableFrom && (

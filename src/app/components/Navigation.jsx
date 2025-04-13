@@ -113,7 +113,7 @@ export default function Navigation() {
                 />
               </div>
               <span className="text-2xl font-InstrumentSans font-semibold text-[#503622]">
-                EQ therapy
+                EQ Therapy
               </span>
             </button>
           </motion.div>
