@@ -192,17 +192,17 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
                 <Image
-                  src={meganImage}
-                  alt="Megan Burton - EQ Therapy"
+                  src={jordanImage}
+                  alt="Jordan - EQ Therapy"
                   fill
                   className="object-cover object-[center_10%]"
                 />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                   <Link
-                    href="/therapists/megan-burton"
+                    href="/therapists/jordan-white"
                     className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#503622] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                   >
-                    Start Therapy with Megan
+                    Start Therapy with Jordan
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                   </Link>
                 </div>
@@ -332,63 +332,63 @@ export default function Home() {
               {
                 name: 'Lin Garih',
                 image: linImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
                 profileLink: '/therapists/lin-garih'
               },
               {
                 name: 'Shaden Alkhalifah',
                 image: shadenImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
                 profileLink: '/therapists/shaden-alkhalifah'
               },
               {
                 name: 'Elizabeth Zeck',
                 image: elizabethImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['Life Transitions', 'Relationship Challenges', 'Emotional Regulation'],
                 profileLink: '/therapists/elizabeth-zeck'
               },
               {
                 name: 'Gianella Lombardi',
                 image: gianellaImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['Anxiety', 'Attachment Issues', 'Relationship Challenges'],
                 profileLink: '/therapists/gianella-lombardi'
               },
               {
                 name: 'Jordan White',
                 image: jordanImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['LGBTQ+', 'College Students', 'Person-Centered Therapy'],
                 profileLink: '/therapists/jordan-white'
               },
               {
                 name: 'Hayden Herter',
                 image: haydenImage,
-                role: 'Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['CBT', 'Psychodynamic', 'Trauma Healing'],
                 profileLink: '/therapists/hayden-herter'
               },
               {
                 name: 'Sean Ash',
                 image: seanImage,
-                role: 'Clinical Mental Health Counseling at University of Northern Colorado College of Education and Behavioral Sciences',
+                role: 'Graduate Program: Clinical Mental Health Counseling at University of Northern Colorado College of Education and Behavioral Sciences',
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/sean-ash'
               },
               {
                 name: 'Dr. Eric Gutgarts',
                 image: ericImage,
-                role: 'Clinical Mental Health Counseling at University of Northern Colorado College of Education and Behavioral Sciences',
+                role: 'Doctoral Degree: Entrepreneurial Leadership at Johns Hopkins University, Master’s Degree: Counseling for Mental Health and Wellness at New York University ',
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/eric-gutgarts'
               }, 
               {
                 name: 'Megan Burton',
                 image: meganImage,
-                role: 'Clinical Mental Health Counseling at University of Northern Colorado College of Education and Behavioral Sciences',
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/megan-burton'
               }

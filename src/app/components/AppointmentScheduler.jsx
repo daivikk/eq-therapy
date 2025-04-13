@@ -13,9 +13,13 @@ export default function AppointmentScheduler({ therapist }) {
 
   const getAvailableDates = () => {
     const dates = [];
+    const startDate = therapist.availableFrom === 'May 2025' 
+      ? new Date(2025, 4, 1) // May 1, 2025
+      : new Date(); // Current date for available therapists
+
     for (let i = 0; i < 7; i++) {
-      const date = new Date(today);
-      date.setDate(today.getDate() + i);
+      const date = new Date(startDate);
+      date.setDate(startDate.getDate() + i);
       const dayName = days[date.getDay()];
       if (therapist.availability[dayName]?.length > 0) {
         dates.push(date);
@@ -73,6 +77,9 @@ export default function AppointmentScheduler({ therapist }) {
                   <div className="text-lg font-medium">
                     {date.getDate()}
                   </div>
+                  <div className="text-xs text-[#8B7355]">
+                    {date.toLocaleDateString('en-US', { month: 'short' })}
+                  </div>
                 </motion.button>
               ))}
             </div>
@@ -111,7 +118,7 @@ export default function AppointmentScheduler({ therapist }) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Book Appointment
+              Book an Intake Session
             </motion.button>
           )}
         </div>
