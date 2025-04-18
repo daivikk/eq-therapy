@@ -321,12 +321,8 @@ export default function Home() {
       <AnimatedSection className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-['Instrument Sans'] text-[#503622] text-center mb-16">Meet Our Therapists</h2>
-          <motion.div 
+          <div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
           >
             {[
               {
@@ -381,7 +377,7 @@ export default function Home() {
               {
                 name: 'Dr. Eric Gutgarts',
                 image: ericImage,
-                role: 'Doctoral Degree: Entrepreneurial Leadership at Johns Hopkins University, Master’s Degree: Counseling for Mental Health and Wellness at New York University ',
+                role: 'Doctoral Degree: Entrepreneurial Leadership at Johns Hopkins University, Master\'s Degree: Counseling for Mental Health and Wellness at New York University',
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/eric-gutgarts'
               }, 
@@ -394,12 +390,7 @@ export default function Home() {
               }
             ].map((member, index) => (
               <Link href={member.profileLink} key={index}>
-                <motion.div 
-                  className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-                  variants={fadeIn}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.3 }}
-                >
+                <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow md:transform md:hover:-translate-y-1">
                   <div className="relative h-60 w-full mb-4 rounded-lg overflow-hidden">
                     <Image
                       src={member.image}
@@ -417,10 +408,10 @@ export default function Home() {
                       </span>
                     ))}
                   </div> */}
-                </motion.div>
+                </div>
               </Link>
             ))}
-          </motion.div>
+          </div>
         </div>
       </AnimatedSection>
 
