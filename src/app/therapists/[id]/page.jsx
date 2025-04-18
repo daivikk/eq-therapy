@@ -24,7 +24,7 @@ const therapists = [
     image: linImage,
     bio: "Therapy with me is collaborative and tailored to your unique needs. With experience in private mental health settings and volunteer work in community settings, I strive to bring a balanced perspective that integrates empathy with an understanding of diverse life experiences. I integrate psychodynamic, person-centered, and cognitive behavioral modalities, offering a holistic and evidence-based approach. I have experience supporting adults dealing with anxiety, ADHD, depression, trauma, interpersonal challenges, life transitions, and burnout. No matter what brings you to therapy, I am committed to guiding you through the process with patience and understanding.",
     // specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availability: {
       monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
       tuesday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'],
@@ -40,7 +40,7 @@ const therapists = [
     image: shadenImage,
     bio: "I am committed to creating a compassionate and affirming space where clients can explore their emotions, relationships, and identities. I utilize relational and psychodynamic approaches to help clients deepen their self-awareness and navigate life's challenges. My clinical experience spans inpatient hospital settings, nonprofit organizations, and private practice, allowing me to work with a diverse range of clients and presenting concerns. In addition to my clinical work, I have a background in psychological research, further enriching my understanding of mental health and human behavior. My approach is collaborative and insight-oriented, focusing on how past experiences shape present patterns and fostering meaningful personal growth.",
     // specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availability: {
       monday: ['4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
       tuesday: ['1:00 PM', '2:00 PM', '3:00 PM', '6:00 PM'],
@@ -55,7 +55,7 @@ const therapists = [
     image: elizabethImage,
     bio: "Growing up in an international community, I developed a focus on the collaboration and exploration of an individual's personal background. I have a strong interest in working with those navigating life transitions, relationship challenges, and emotional regulation. In my clinical work, I have a client-centered approach in understanding the therapeutic relationship as a dynamic interaction, incorporating elements of psychodynamic counseling and mindfulness techniques to help clients develop greater self-awareness and emotional resilience. I'm passionate about fostering a supportive space where clients feel empowered to explore their experiences and grow.",
     // specialties: ['Life Transitions', 'Relationship Challenges', 'Emotional Regulation', 'Mindfulness'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availableFrom: 'May 2025',
     availability: {
       monday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
@@ -73,7 +73,7 @@ const therapists = [
     image: gianellaImage,
     bio: "I am dedicated to helping adolescents, young adults, and couples navigate anxiety, attachment, and relationship challenges. My approach focuses on identifying and reshaping unhelpful thought patterns and behaviors that impact emotional well-being. I believe in a collaborative and supportive approach, creating a space where clients feel heard, empowered, and equipped with the tools to build resilience and meaningful connections. My passion lies in helping individuals develop self-awareness, strengthen their relationships, and grow into their best selves. If you're interested in working with me, please send an appointment request.",
     // specialties: ['Anxiety', 'Attachment Issues', 'Relationship Challenges', 'Young Adults'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availableFrom: 'May 2025',
     availability: {
       monday: ['9:00 AM', '10:00 AM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
@@ -89,7 +89,7 @@ const therapists = [
     image: jordanImage,
     bio: "I am passionate about providing client-centered care and creating an inclusive environment for individuals from diverse backgrounds. I'm open to working with individuals from all walks of life, and have experience working with adults, college students, adolescents, children, LGBTQ+ individuals, and people with disabilities. In my clinical approach, I value collaboration, empathy, and self-exploration throughout the therapeutic process. I take a person-centered and narrative approach to counseling and am flexible in integrating other orientations to support each client's unique needs.",
     // specialties: ['LGBTQ+', 'College Students', 'Person-Centered Therapy', 'Narrative Therapy'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availableFrom: 'May 2025',
     availability: {
       monday: ['4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
@@ -104,7 +104,7 @@ const therapists = [
     image: seanImage,
     bio: "I primarily work with young adults, and I'm especially passionate about serving the African American community, those involved in the criminal justice system, and individuals with marginalized identities & disabilities. My therapeutic approach is integrative, combining Cognitive Behavioral Therapy (CBT) with mindfulness, gestalt techniques, and Dialectical Behavior Therapy (DBT). My main areas of focus include anxiety, depression, eating disorders, suicide, and other mood disorders. I am committed to authenticity and genuine care, believing in a real, approachable way of communicating with clients that fosters safety, trust, and growth. I strive to create a compassionate, collaborative space for clients to heal and grow.",
     // specialties: ['CBT', 'Mindfulness', 'African American Community', 'Young Adults'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availableFrom: 'May 2025',
     availability: {
       monday: ['3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
@@ -119,7 +119,7 @@ const therapists = [
     image: haydenImage,
     bio: "My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness, challenge unhelpful thought patterns, and develop effective coping strategies. I understand that every person is unique which is why I work collaboratively with clients to develop a strategy that supports their individualized goals. My work is rooted in promoting self-compassion, resilience, and self-awareness, empowering clients to break free from past patterns and move forward with confidence. I believe that healing is not linear, and together we will celebrate progress while addressing challenges with curiosity and care. Whether you’re seeking support to heal from trauma or guidance on building healthier relationships, I am here to help you create lasting change.",
     // specialties: ['CBT', 'Psychodynamic', 'Trauma Healing', 'Self-Compassion'],
-    rate: 'Insurance Accepted',
+    rate: 'Insurance Accepted: Aetna, Anthem Blue Cross and Blue Shield, Anthem EAP, Blue Cross Blue Shield of Massachusetts, Carelon Behavioral Health, Cigna, Oscar, Oxford, Quest Behavioral Health, United Healthcare',
     availableFrom: 'May 2025',
     availability: {
       monday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
