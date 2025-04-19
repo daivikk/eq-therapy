@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import logoImage from '../images/Logo.png';
+// import logoImage from '../images/Logo.png';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,14 +104,14 @@ export default function Navigation() {
               className="flex items-center cursor-pointer"
               aria-label="Go to top of page"
             >
-              <div className="relative w-10 h-10 mr-2">
+              {/* <div className="relative w-10 h-10 mr-2">
                 <Image
                   src={logoImage}
                   alt="EQ Therapy Logo"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </div> */}
               <span className="text-2xl font-InstrumentSans font-semibold text-[#503622]">
                 EQ Therapy
               </span>
