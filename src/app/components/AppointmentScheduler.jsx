@@ -175,12 +175,12 @@ export default function AppointmentScheduler({ therapist }) {
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-medium text-[#503622] mb-6">
+      <h2 className="text-2xl font-medium text-[#2C1A47] mb-6">
         Book an Appointment
       </h2>
       <div className="space-y-6">
         <div>
-          <h3 className="text-lg font-medium text-[#503622] mb-3">
+          <h3 className="text-lg font-medium text-[#2C1A47] mb-3">
             Select a Date
           </h3>
           <div className="grid grid-cols-7 gap-2">
@@ -191,8 +191,8 @@ export default function AppointmentScheduler({ therapist }) {
                 onClick={() => handleDateSelect(date)}
                 className={`p-2 rounded-lg text-center ${
                   selectedDate?.toDateString() === date.toDateString()
-                    ? 'bg-[#503622] text-white'
-                    : 'bg-[#F5F1EE] text-[#503622] hover:bg-[#E8E0D9]'
+                    ? 'bg-[#E2CFFF] text-[#2C1A47]'
+                    : 'bg-[#F0E6FF] text-[#2C1A47] hover:bg-[#F0E6FF]'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -203,7 +203,7 @@ export default function AppointmentScheduler({ therapist }) {
                 <div className="text-lg font-medium">
                   {date.getDate()}
                 </div>
-                <div className="text-xs text-[#8B7355]">
+                <div className="text-xs text-[#2C1A47]">
                   {date.toLocaleDateString('en-US', { month: 'short' })}
                 </div>
               </motion.button>
@@ -213,7 +213,7 @@ export default function AppointmentScheduler({ therapist }) {
 
         {selectedDate && (
           <div>
-            <h3 className="text-lg font-medium text-[#503622] mb-3">
+            <h3 className="text-lg font-medium text-[#2C1A47] mb-3">
               Select a Time
             </h3>
             <div className="grid grid-cols-2 gap-2">
@@ -229,8 +229,8 @@ export default function AppointmentScheduler({ therapist }) {
                       isBooked 
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                         : selectedTime === time
-                          ? 'bg-[#503622] text-white'
-                          : 'bg-[#F5F1EE] text-[#503622] hover:bg-[#E8E0D9]'
+                          ? 'bg-[#000000] text-[#ffffff]'
+                          : 'bg-[#F0E6FF] text-[#2C1A47] hover:bg-[#F0E6FF]'
                     }`}
                     whileHover={!isBooked ? { scale: 1.05 } : {}}
                     whileTap={!isBooked ? { scale: 0.95 } : {}}
@@ -248,7 +248,7 @@ export default function AppointmentScheduler({ therapist }) {
           <motion.button
             type="button"
             onClick={openBookingModal}
-            className="w-full py-3 rounded-lg bg-[#503622] text-white hover:bg-[#8B7355] transition-colors"
+            className="w-full py-3 rounded-lg bg-[#2C1A47] text-white hover:bg-[#000000] transition-colors"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -267,7 +267,7 @@ export default function AppointmentScheduler({ therapist }) {
               exit={{ opacity: 0, scale: 0.9 }}
               className="bg-white rounded-lg p-6 max-w-md w-full m-4"
             >
-              <h3 className="text-xl font-medium text-[#503622] mb-4">
+              <h3 className="text-xl font-medium text-[#2C1A47] mb-4">
                 Complete Your Booking
               </h3>
               
@@ -276,18 +276,18 @@ export default function AppointmentScheduler({ therapist }) {
                   <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <p className="text-lg font-medium text-[#503622]">Booking Confirmed!</p>
-                  <p className="text-[#5C4D3C]">Check your email for details.</p>
+                  <p className="text-lg font-medium text-[#2C1A47]">Booking Confirmed!</p>
+                  <p className="text-[#2C1A47]">Check your email for details.</p>
                 </div>
               ) : bookingStatus === 'error' ? (
                 <div className="text-center p-4">
                   <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                   </svg>
-                  <p className="text-lg font-medium text-[#503622]">Booking Failed</p>
-                  <p className="text-[#5C4D3C]">Please try again later.</p>
+                  <p className="text-lg font-medium text-[#2C1A47]">Booking Failed</p>
+                  <p className="text-[#2C1A47]">Please try again later.</p>
                   <button
-                    className="mt-4 px-4 py-2 bg-[#503622] text-white rounded-lg hover:bg-[#8B7355]"
+                    className="mt-4 px-4 py-2 bg-[#2C1A47] text-white rounded-lg hover:bg-[#000000]"
                     onClick={() => setBookingStatus(null)}
                   >
                     Try Again
@@ -297,7 +297,7 @@ export default function AppointmentScheduler({ therapist }) {
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-[#5C4D3C] mb-4">
+                      <p className="text-[#2C1A47] mb-4">
                         You're booking with <span className="font-medium">{therapist.name}</span> on{" "}
                         <span className="font-medium">
                           {selectedDate?.toLocaleDateString('en-US', {
@@ -311,7 +311,7 @@ export default function AppointmentScheduler({ therapist }) {
                       </p>
                     </div>
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-[#503622]">
+                      <label htmlFor="name" className="block text-sm font-medium text-[#2C1A47]">
                         Full Name
                       </label>
                       <input
@@ -321,11 +321,11 @@ export default function AppointmentScheduler({ therapist }) {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="mt-1 block w-full px-3 py-2 border border-[#E8E0D9] rounded-md focus:outline-none focus:ring-2 focus:ring-[#503622]"
+                        className="mt-1 block w-full px-3 py-2 border border-[#2C1A47] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C1A47]"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-[#503622]">
+                      <label htmlFor="email" className="block text-sm font-medium text-[#2C1A47]">
                         Email
                       </label>
                       <input
@@ -335,11 +335,11 @@ export default function AppointmentScheduler({ therapist }) {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="mt-1 block w-full px-3 py-2 border border-[#E8E0D9] rounded-md focus:outline-none focus:ring-2 focus:ring-[#503622]"
+                        className="mt-1 block w-full px-3 py-2 border border-[#2C1A47] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C1A47]"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-[#503622]">
+                      <label htmlFor="phone" className="block text-sm font-medium text-[#2C1A47]">
                         Phone Number
                       </label>
                       <input
@@ -349,11 +349,11 @@ export default function AppointmentScheduler({ therapist }) {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="mt-1 block w-full px-3 py-2 border border-[#E8E0D9] rounded-md focus:outline-none focus:ring-2 focus:ring-[#503622]"
+                        className="mt-1 block w-full px-3 py-2 border border-[#2C1A47] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C1A47]"
                       />
                     </div>
                     <div>
-                      <label htmlFor="referral" className="block text-sm font-medium text-[#503622]">
+                      <label htmlFor="referral" className="block text-sm font-medium text-[#2C1A47]">
                         How did you hear about us? (optional)
                       </label>
                       <input
@@ -362,7 +362,7 @@ export default function AppointmentScheduler({ therapist }) {
                         name="referral"
                         value={formData.referral}
                         onChange={handleInputChange}
-                        className="mt-1 block w-full px-3 py-2 border border-[#E8E0D9] rounded-md focus:outline-none focus:ring-2 focus:ring-[#503622]"
+                        className="mt-1 block w-full px-3 py-2 border border-[#2C1A47] rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C1A47]"
                       />
                     </div>
                   </div>
@@ -370,14 +370,14 @@ export default function AppointmentScheduler({ therapist }) {
                     <button
                       type="button"
                       onClick={() => setShowModal(false)}
-                      className="px-4 py-2 border border-[#503622] text-[#503622] rounded-lg hover:bg-[#F5F1EE]"
+                      className="px-4 py-2 border border-[#2C1A47] text-[#2C1A47] rounded-lg hover:bg-[#F0E6FF]"
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="px-4 py-2 bg-[#503622] text-white rounded-lg hover:bg-[#8B7355] disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-4 py-2 bg-[#2C1A47] text-white rounded-lg hover:bg-[#000000] disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center">

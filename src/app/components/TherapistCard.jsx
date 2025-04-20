@@ -24,10 +24,10 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
         />
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-medium text-[#503622] mb-2">
+        <h3 className="text-2xl font-medium text-[#2C1A47] mb-2">
           {therapist.name}
         </h3>
-        <p className="text-[#5C4D3C] mb-4">{therapist.bio}</p>
+        <p className="text-[#2C1A47] mb-4">{therapist.bio}</p>
         {/* <div className="flex flex-wrap gap-2 mb-4">
           {therapist.specialties.map((specialty, index) => (
             <span
@@ -39,15 +39,15 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
           ))}
         </div> */}
         <div className="flex justify-between items-center">
-          <span className="text-[#503622] font-medium">{therapist.rate}</span>
+          <span className="text-[#2C1A47] font-medium">{therapist.rate}</span>
           {therapist.availableFrom && (
-            <span className="text-[#8B7355] text-sm">
+            <span className="text-[#2C1A47] text-sm">
               Available from {therapist.availableFrom}
             </span>
           )}
         </div>
         {therapist.availabilityNote && (
-          <p className="text-[#8B7355] text-sm mt-2">{therapist.availabilityNote}</p>
+          <p className="text-[#2C1A47] text-sm mt-2">{therapist.availabilityNote}</p>
         )}
       </div>
     </div>

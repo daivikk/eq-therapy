@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 // import logoImage from '../images/Logo.png';
+import logoImage from '../images/newlogo.png';
+
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,15 +106,15 @@ export default function Navigation() {
               className="flex items-center cursor-pointer"
               aria-label="Go to top of page"
             >
-              {/* <div className="relative w-10 h-10 mr-2">
+              <div className="relative w-16 h-16 mt-2 mr-2">
                 <Image
                   src={logoImage}
                   alt="EQ Therapy Logo"
                   fill
                   className="object-contain"
                 />
-              </div> */}
-              <span className="text-2xl font-InstrumentSans font-semibold text-[#503622]">
+              </div>
+              <span className="text-2xl font-InstrumentSans font-semibold text-[#3B2360]">
                 EQ Therapy
               </span>
             </button>
@@ -130,14 +132,14 @@ export default function Navigation() {
                 {item.action ? (
                   <button 
                     onClick={item.action}
-                    className="text-[#503622] hover:text-[#8B7355] transition-colors cursor-pointer"
+                    className="text-[#2C1A47] hover:text-[#000000] transition-colors cursor-pointer"
                   >
                     {item.name}
                   </button>
                 ) : (
                   <Link 
                     href={item.href} 
-                    className="text-[#503622] hover:text-[#8B7355] transition-colors"
+                    className="text-[#2C1A47] hover:text-[#000000] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -151,7 +153,7 @@ export default function Navigation() {
             >
               <Link 
                 href="/book" 
-                className="px-4 py-2 rounded-full bg-[#503622] text-white hover:bg-[#8B7355] transition-colors"
+                className="px-4 py-2 rounded-full bg-[#2C1A47] text-white hover:bg-[#000000] transition-colors"
               >
                 Book a Session
               </Link>
@@ -162,7 +164,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#503622] hover:text-[#8B7355]"
+              className="text-[#2C1A47] hover:text-[#000000]"
             >
               <svg
                 className="h-6 w-6"
@@ -216,14 +218,14 @@ export default function Navigation() {
                   {item.action ? (
                     <button
                       onClick={item.action}
-                      className="block w-full text-left px-3 py-2 text-[#503622] hover:text-[#8B7355] cursor-pointer"
+                      className="block w-full text-left px-3 py-2 text-[#2C1A47] hover:text-[#000000] cursor-pointer"
                     >
                       {item.name}
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="block px-3 py-2 text-[#503622] hover:text-[#8B7355]"
+                      className="block px-3 py-2 text-[#2C1A47] hover:text-[#000000]"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}

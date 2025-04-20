@@ -176,10 +176,10 @@ export default function BookPage() {
 
       <main className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-medium text-[#503622] text-center mb-4">
+          <h1 className="text-4xl font-medium text-[#2C1A47] text-center mb-4">
             Book a Session
           </h1>
-          <p className="text-[#5C4D3C] text-center mb-8 max-w-2xl mx-auto">
+          <p className="text-[#2C1A47] text-center mb-8 max-w-2xl mx-auto">
             Choose a therapist and schedule your session at a time that works best for you.
           </p>
 
@@ -189,8 +189,8 @@ export default function BookPage() {
                 onClick={() => setFilterStartingMay(false)}
                 className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
                   !filterStartingMay
-                    ? 'bg-[#503622] text-white'
-                    : 'bg-white text-[#503622] border border-[#503622]'
+                    ? 'bg-[#2C1A47] text-white'
+                    : 'bg-white text-[#2C1A47] border border-[#2C1A47]'
                 }`}
               >
                 Currently Available
@@ -199,8 +199,8 @@ export default function BookPage() {
                 onClick={() => setFilterStartingMay(true)}
                 className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
                   filterStartingMay
-                    ? 'bg-[#503622] text-white'
-                    : 'bg-white text-[#503622] border border-[#503622]'
+                    ? 'bg-[#2C1A47] text-white'
+                    : 'bg-white text-[#2C1A47] border border-[#2C1A47]'
                 }`}
               >
                 Starting May 2025
@@ -249,8 +249,8 @@ export default function BookPage() {
                         }`}
                       />
                     </div>
-                    <h3 className="text-xl font-['Instrument Sans'] text-[#503622] mb-2">{therapist.name}</h3>
-                    <p className="text-sm font-['Inter Medium'] text-[#8B7355] mb-4">{therapist.bio}</p>
+                    <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{therapist.name}</h3>
+                    <p className="text-sm font-['Inter Medium'] text-[#2C1A47] mb-4">{therapist.bio}</p>
                     {/* <div className="flex flex-wrap gap-2">
                       {therapist.specialties.map((specialty, i) => (
                         <span key={i} className="px-3 py-1 bg-[#F5F1EE] text-[#503622] rounded-full text-xs">

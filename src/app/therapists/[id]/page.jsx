@@ -176,15 +176,15 @@ export default function TherapistProfile() {
         <Navigation />
         <main className="pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl font-medium text-[#503622] mb-4">
+            <h1 className="text-4xl font-medium text-[#2C1A47] mb-4">
               Therapist Not Found
             </h1>
-            <p className="text-[#5C4D3C] mb-8">
+            <p className="text-[#2C1A47] mb-8">
               The therapist you're looking for could not be found.
             </p>
             <Link
               href="/book"
-              className="inline-block px-4 py-2 rounded-full bg-[#503622] text-white hover:bg-[#8B7355] transition-colors"
+              className="inline-block px-4 py-2 rounded-full bg-[#2C1A47] text-white hover:bg-[#000000] transition-colors"
             >
               Back to All Therapists
             </Link>
@@ -206,7 +206,7 @@ export default function TherapistProfile() {
               <TherapistCard therapist={therapist} />
               <Link
                 href="/book"
-                className="mt-4 w-full px-4 py-2 rounded-full border border-[#503622] text-[#503622] hover:bg-[#F5F1EE] transition-colors text-center block"
+                className="mt-4 w-full px-4 py-2 rounded-full border border-[#2C1A47] text-[#2C1A47] hover:bg-[#000000] hover:text-[#ffffff] transition-colors text-center block"
               >
                 Back to All Therapists
               </Link>
