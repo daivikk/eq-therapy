@@ -18,37 +18,39 @@ import meganImage from '../images/megan.png';
 
 
 const therapists = [
-  {
-    id: 'lin-garih',
-    name: 'Lin Garih',
-    image: linImage,
-    bio: "Therapy with me is collaborative and tailored to your unique needs. With experience in private mental health settings and volunteer work in community settings, I strive to bring a balanced perspective that integrates empathy with an understanding of diverse life experiences. I integrate psychodynamic, person-centered, and cognitive behavioral modalities, offering a holistic and evidence-based approach. I have experience supporting adults dealing with anxiety, ADHD, depression, trauma, interpersonal challenges, life transitions, and burnout. No matter what brings you to therapy, I am committed to guiding you through the process with patience and understanding.",
-    // specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
-    rate: 'Insurance Accepted',
-    availability: {
-      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM', '6:00 PM', '7:00 PM', '8:00 PM'],
-      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM'],
-      wednesday: ['3:00 PM', '4:00 PM', '5:00 PM'],
-      thursday: ['4:00 PM', '5:00 PM'],
-      friday: ['2:00 PM', '3:00 PM'],
-      sunday: ['1:00 PM', '2:00 PM', '3:00 PM', '5:00 PM']
-    }
-  },
-  {
-    id: 'shaden-alkhalifah',
-    name: 'Shaden Alkhalifah',
-    image: shadenImage,
-    bio: "I am committed to creating a compassionate and affirming space where clients can explore their emotions, relationships, and identities. I utilize relational and psychodynamic approaches to help clients deepen their self-awareness and navigate life's challenges. My clinical experience spans inpatient hospital settings, nonprofit organizations, and private practice, allowing me to work with a diverse range of clients and presenting concerns. In addition to my clinical work, I have a background in psychological research, further enriching my understanding of mental health and human behavior. My approach is collaborative and insight-oriented, focusing on how past experiences shape present patterns and fostering meaningful personal growth.",
-    // specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
-    rate: 'Insurance Accepted',
-    availability: {
-      monday: ['4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
-      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM', '6:00 PM'],
-      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-      friday: ['2:00 PM', '2:45 PM', '4:00 PM', '7:00 PM'],
-      saturday: ['12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM']
-    }
-  },
+  // Commented out profiles that may be added back later
+  // {
+  //   id: 'lin-garih',
+  //   name: 'Lin Garih',
+  //   image: linImage,
+  //   bio: 'I am a dedicated therapist with a passion for helping individuals navigate life\'s challenges. My approach is collaborative and tailored to each client\'s unique needs, focusing on creating a safe and supportive environment for growth and healing.',
+  //   specialties: ['Anxiety', 'Depression', 'Relationship Issues'],
+  //   rate: '$150',
+  //   availableFrom: 'July 2025',
+  //   availability: {
+  //     monday: '9:00 AM - 5:00 PM',
+  //     tuesday: '9:00 AM - 5:00 PM',
+  //     wednesday: '9:00 AM - 5:00 PM',
+  //     thursday: '9:00 AM - 5:00 PM',
+  //     friday: '9:00 AM - 5:00 PM'
+  //   }
+  // },
+  // {
+  //   id: 'shaden-alkhalifah',
+  //   name: 'Shaden Alkhalifah',
+  //   image: shadenImage,
+  //   bio: 'With extensive clinical experience, I specialize in helping clients navigate complex emotional challenges. My therapeutic approach combines evidence-based techniques with a deep understanding of cultural and individual differences.',
+  //   specialties: ['Trauma', 'Anxiety', 'Cultural Issues'],
+  //   rate: '$150',
+  //   availableFrom: 'July 2025',
+  //   availability: {
+  //     monday: '9:00 AM - 5:00 PM',
+  //     tuesday: '9:00 AM - 5:00 PM',
+  //     wednesday: '9:00 AM - 5:00 PM',
+  //     thursday: '9:00 AM - 5:00 PM',
+  //     friday: '9:00 AM - 5:00 PM'
+  //   }
+  // },
   {
     id: 'elizabeth-zeck',
     name: 'Elizabeth Zeck',
@@ -117,7 +119,7 @@ const therapists = [
     id: 'hayden-herter',
     name: 'Hayden Herter',
     image: haydenImage,
-    bio: "My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness, challenge unhelpful thought patterns, and develop effective coping strategies. I understand that every person is unique which is why I work collaboratively with clients to develop a strategy that supports their individualized goals. My work is rooted in promorting self-compassion, resilience, and self-awareness, empowering clients to break free from past patterns and move forward with confidence. I believe that healing is not linear, and together we will celebrate progress while addressing challenges with curiosity and care. Whether you’re seeking support to heal from trauma or guidance on building healthier relationships, I am here to help you create lasting change.",
+    bio: "My therapeutic approach blends Cognitive Behavioral Therapy (CBT) and psychodynamic principles to encourage self-awareness, challenge unhelpful thought patterns, and develop effective coping strategies. I understand that every person is unique so I work collaboratively with clients to develop a strategy that supports their individualized goals. My work is rooted in promorting self-compassion, resilience, and self-awareness, empowering clients to break free from past patterns and move forward with confidence. I believe that healing is not linear, and together we will celebrate progress while addressing challenges with curiosity and care. Whether you're seeking support to heal from trauma or guidance on building healthier relationships, I'm here to help you create lasting change.",
     // specialties: ['CBT', 'Psychodynamic', 'Trauma Healing', 'Self-Compassion'],
     rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
@@ -163,12 +165,9 @@ const therapists = [
 
 export default function BookPage() {
   const [selectedTherapist, setSelectedTherapist] = useState(null);
-  const [filterStartingMay, setFilterStartingMay] = useState(false);
 
-  // Filter therapists based on availability
-  const filteredTherapists = filterStartingMay 
-    ? therapists.filter(t => t.availableFrom === 'May 2025')
-    : therapists.filter(t => !t.availableFrom);
+  // Filter therapists to only show May 2025
+  const filteredTherapists = therapists.filter(t => t.availableFrom === 'May 2025');
 
   return (
     <div className="min-h-screen bg-white font-['Inter']">
@@ -182,31 +181,6 @@ export default function BookPage() {
           <p className="text-[#2C1A47] text-center mb-8 max-w-2xl mx-auto">
             Choose a therapist and schedule your session at a time that works best for you.
           </p>
-
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex rounded-md shadow-sm" role="group">
-              <button
-                onClick={() => setFilterStartingMay(false)}
-                className={`px-4 py-2 text-sm font-medium rounded-l-lg ${
-                  !filterStartingMay
-                    ? 'bg-[#2C1A47] text-white'
-                    : 'bg-white text-[#2C1A47] border border-[#2C1A47]'
-                }`}
-              >
-                Currently Available
-              </button>
-              <button
-                onClick={() => setFilterStartingMay(true)}
-                className={`px-4 py-2 text-sm font-medium rounded-r-lg ${
-                  filterStartingMay
-                    ? 'bg-[#2C1A47] text-white'
-                    : 'bg-white text-[#2C1A47] border border-[#2C1A47]'
-                }`}
-              >
-                Starting May 2025
-              </button>
-            </div>
-          </div>
 
           {selectedTherapist ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

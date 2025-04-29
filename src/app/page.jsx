@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import TherapistCard from './components/TherapistCard';
 import linImage from '../app/images/lin.png';
 import shadenImage from '../app/images/shaden.png';
 import meganImage from '../app/images/megan.png';
@@ -130,18 +131,18 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src={linImage}
-                alt="Lin Garih - EQ Therapy"
+                src={elizabethImage}
+                alt="Elizabeth Zeck - EQ Therapy"
                 fill
-                className="object-cover object-[center_60%]"
+                className="object-cover object-[center_40%]"
                 priority
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                 <Link
-                  href="/therapists/lin-garih"
+                  href="/therapists/elizabeth-zeck"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
-                  Start Therapy with Lin
+                  Start Therapy with Elizabeth
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                 </Link>
               </div>
@@ -169,17 +170,17 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
               >
                 <Image
-                  src={shadenImage}
-                  alt="Shaden Alkhalifah - EQ Therapy"
+                  src={gianellaImage}
+                  alt="Gianella Lombardi - EQ Therapy"
                   fill
-                  className="object-cover object-[center_20%]"
+                  className="object-cover object-[center_40%]"
                 />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                   <Link
-                    href="/therapists/shaden-alkhalifah"
+                    href="/therapists/gianella-lombardi"
                     className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                   >
-                    Start Therapy with Shaden
+                    Start Therapy with Gianella
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                   </Link>
                 </div>
@@ -216,25 +217,25 @@ export default function Home() {
             >
               <h2 className="text-4xl font-['Instrument Sans'] text-[#2C1A47] mb-6">The EQ Method</h2>
               <p className="text-[#2C1A47] mb-8">
-              The EQ Method uses a model of utilizing evidence-based theoretical orientations to increase your capacity to develop a self-concept that can be an indisputable strength in accomplishing your personal goals. Therapists are trained to work with clients who already have emotional awareness, social skills, professional acumen, and, most importantly, the ability to keep themselves accountable based on their intelligence. Throughout therapy, you will go through three phases:
+                The EQ Method uses a model of utilizing evidence-based theoretical orientations to increase your capacity to develop a self-concept that can be an indisputable strength in accomplishing your personal goals. Therapists are trained to work with clients who already have emotional awareness, social skills, professional acumen, and, most importantly, the ability to keep themselves accountable based on their intelligence. Throughout therapy, you will go through three phases:
               </p>
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 1: Psychodynamic Therapy</h3>
                   <p className="text-[#2C1A47]">
-                  You will start your therapeutic journey by understanding what fears and anxieties are influencing thought patterns and emotional responses. With a psychodynamic approach at the beginning of treatment, you can become more cognizant of conditioned thoughts or behaviors and how they relate to experiences in the here-and-now. Intrusive thought patterns will be identified, while consistent themes will be focused on using cognitive challenging and rationalization techniques. Relationships will be explored through social, family, romantic, and professional contexts. You will aim to make meaning of past experiences and process anything that may still be affecting you today.
+                    You will start your therapeutic journey by understanding what fears and anxieties are influencing thought patterns and emotional responses. With a psychodynamic approach at the beginning of treatment, you can become more cognizant of conditioned thoughts or behaviors and how they relate to experiences in the here-and-now. Intrusive thought patterns will be identified, while consistent themes will be focused on using cognitive challenging and rationalization techniques. Relationships will be explored through social, family, romantic, and professional contexts. You will aim to make meaning of past experiences and process anything that may still be affecting you today.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 2: Cognitive Behavioral Therapy</h3>
                   <p className="text-[#2C1A47]">
-                  In the next stage of your therapeutic journey, you will use a cognitive-behavioral approach to begin making the changes you want to see in your life. Interpersonally, this would result in changing expectations and setting boundaries. Professionally, this would result in advocating for what you want or pursuing what makes you most fulfilled in life. Romantically, this would result in self-awareness and transparency regarding what you want and what it looks like. Personally, this would result in focusing less on constructs that you can't control and feeling empowered by the way you can begin to control the next chapters of your life.
+                    In the next stage of your therapeutic journey, you will use a cognitive-behavioral approach to begin making the changes you want to see in your life. Interpersonally, this would result in changing expectations and setting boundaries. Professionally, this would result in advocating for what you want or pursuing what makes you most fulfilled in life. Romantically, this would result in self-awareness and transparency regarding what you want and what it looks like. Personally, this would result in focusing less on constructs that you can't control and feeling empowered by the way you can begin to control the next chapters of your life.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 3: Solution Focused Approach</h3>
                   <p className="text-[#2C1A47]">
-                  With the integration of solution-focused therapy, progress will be revisited frequently, clients will be able to feel "in the driver's seat" with the direction of their treatment plan, and clinical approaches will be used in accordance with each client's treatment goals. The EQ Clinical Team is passionate about helping clients accomplish what they want to see change at the end of their therapy. They specialize in areas where high-performing professionals experience hardships like perfectionism, ADHD management, rumination or spiraling thought patterns, seeking the approval of others, and more.
+                    With the integration of solution-focused therapy, progress will be revisited frequently, clients will be able to feel "in the driver's seat" with the direction of their treatment plan, and clinical approaches will be used in accordance with each client's treatment goals. The EQ Clinical Team is passionate about helping clients accomplish what they want to see change at the end of their therapy. They specialize in areas where high-performing professionals experience hardships like perfectionism, ADHD management, rumination or spiraling thought patterns, seeking the approval of others, and more.
                   </p>
                 </div>
               </div>
@@ -325,20 +326,20 @@ export default function Home() {
             className="grid grid-cols-1 text-[#2C1A47] md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {[
-              {
-                name: 'Lin Garih',
-                image: linImage,
-                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
-                // specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
-                profileLink: '/therapists/lin-garih'
-              },
-              {
-                name: 'Shaden Alkhalifah',
-                image: shadenImage,
-                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
-                // specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
-                profileLink: '/therapists/shaden-alkhalifah'
-              },
+              // {
+              //   name: 'Lin Garih',
+              //   image: linImage,
+              //   role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+              //   // specialties: ['Anxiety', 'ADHD', 'Depression', 'Trauma'],
+              //   profileLink: '/therapists/lin-garih'
+              // },
+              // {
+              //   name: 'Shaden Alkhalifah',
+              //   image: shadenImage,
+              //   role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+              //   // specialties: ['Relational Therapy', 'Psychodynamic Therapy', 'Mental Health'],
+              //   profileLink: '/therapists/shaden-alkhalifah'
+              // },
               {
                 name: 'Elizabeth Zeck',
                 image: elizabethImage,
@@ -374,18 +375,18 @@ export default function Home() {
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/sean-ash'
               },
-              {
-                name: 'Dr. Eric Gutgarts',
-                image: ericImage,
-                role: 'Doctoral Degree: Entrepreneurial Leadership at Johns Hopkins University, Master\'s Degree: Counseling for Mental Health and Wellness at New York University',
-                // specialties: ['CBT', 'Mindfulness', 'African American Community'],
-                profileLink: '/therapists/eric-gutgarts'
-              }, 
+              // {
+              //   name: 'Dr. Eric Gutgarts',
+              //   image: ericImage,
+              //   role: 'Doctoral Degree: Entrepreneurial Leadership at Johns Hopkins University, Master\'s Degree: Counseling for Mental Health and Wellness at New York University',
+              //   // specialties: ['CBT', 'Mindfulness', 'African American Community'],
+              //   profileLink: '/therapists/eric-gutgarts'
+              // }, 
               {
                 name: 'Megan Burton',
                 image: meganImage,
                 role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
-                // specialties: ['CBT', 'Mindfulness', 'African American Community'],
+                // specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
                 profileLink: '/therapists/megan-burton'
               }
             ].map((member, index) => (
@@ -396,7 +397,7 @@ export default function Home() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className={`object-cover ${member.name === 'Megan Burton' ? 'object-[center_10%]': member.name === 'Lin Garih' ? 'object-[center_47%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Shaden Alkhalifah' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Sean Ash' ? 'object-[center_8%]' :  member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : member.name === 'Dr. Eric Gutgarts' ? 'object-[center_25%]' : 'object-center'}`}
+                      className={`object-cover ${member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Sean Ash' ? 'object-[center_8%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
                     />
                   </div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{member.name}</h3>
