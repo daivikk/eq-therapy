@@ -13,7 +13,7 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
           className={`object-cover ${
             therapist.id === 'elizabeth-zeck' ? 'object-[center_15%]' :
             therapist.id === 'jordan-white' ? 'object-[center_1%]' :
-            therapist.id === 'sean-ash' ? 'object-[center_10%]' :
+            therapist.id === 'steven-wolff' ? 'object-[center_25%]' :
             therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
             therapist.id === 'shaden-alkhalifah' ? 'object-[center_20%]' :
             therapist.id === 'megan-burton' ? 'object-[center_10%]' :

@@ -13,6 +13,7 @@ import elizabethImage from '../app/images/elizabeth.png';
 import ericImage from '../app/images/eric.png';
 import gianellaImage from '../app/images/gianella.png';
 import jordanImage from '../app/images/jordan.png';
+import stevenImage from '../app/images/steven.jpg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
@@ -369,11 +370,11 @@ export default function Home() {
                 profileLink: '/therapists/hayden-herter'
               },
               {
-                name: 'Sean Ash',
-                image: seanImage,
-                role: 'Graduate Program: Clinical Mental Health Counseling at University of Northern Colorado College of Education and Behavioral Sciences',
+                name: 'Steven Wolff',
+                image: stevenImage,
+                role: 'Graduate Program: Clinical Mental Health Counseling at Touro College School of Health Sciences',
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
-                profileLink: '/therapists/sean-ash'
+                profileLink: '/therapists/steven-wolff'
               },
               // {
               //   name: 'Dr. Eric Gutgarts',
@@ -397,7 +398,7 @@ export default function Home() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className={`object-cover ${member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Sean Ash' ? 'object-[center_8%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
+                      className={`object-cover ${member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Steven Wolff' ? 'object-[center_25%] ': member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
                     />
                   </div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{member.name}</h3>

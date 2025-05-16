@@ -12,7 +12,7 @@ import elizabethImage from '../images/elizabeth.png';
 import gianellaImage from '../images/gianella.png';
 import jordanImage from '../images/jordan.png';
 import haydenImage from '../images/hayden.png';
-import seanImage from '../images/sean.png';
+import stevenImage from '../images/steven.jpg';
 import Link from 'next/link';
 import meganImage from '../images/megan.png';
 
@@ -101,11 +101,11 @@ const therapists = [
     }
   },
   {
-    id: 'sean-ash',
-    name: 'Sean Ash',
-    image: seanImage,
-    bio: "I primarily work with young adults, and I'm especially passionate about serving the African American community, those involved in the criminal justice system, and individuals with marginalized identities & disabilities. My therapeutic approach is integrative, combining Cognitive Behavioral Therapy (CBT) with mindfulness, gestalt techniques, and Dialectical Behavior Therapy (DBT). My main areas of focus include anxiety, depression, eating disorders, suicide, and other mood disorders. I am committed to authenticity and genuine care, believing in a real, approachable way of communicating with clients that fosters safety, trust, and growth. I strive to create a compassionate, collaborative space for clients to heal and grow.",
-    // specialties: ['CBT', 'Mindfulness', 'African American Community', 'Young Adults'],
+    id: 'steven-wolff',
+    name: 'Steven Wolff',
+    image: stevenImage,
+    bio: "My approach is to help individuals foster and discover their best selves. Together, we will address how to cope with stressors in everyday life in a judgment-free space. We will work on processing, adapting, or improving during life transitions. Therapy is a space that can bring forth a variety of personal successes when working in a goal-oriented environment. I am devoted to helping individuals develop the tools they feel they need to succeed. I specialize in evidence-based therapies including cognitive behavioral therapy (CBT) and solutions-oriented Therapy (SOT). I can alter my therapeutic approach depending on clients' needs. In working together, we will measure personal development, achievements, and progress. Take that leap forward.",
+    // specialties: ['CBT', 'Solutions-Oriented Therapy', 'Life Transitions', 'Personal Development'],
     rate: 'Insurance Accepted',
     availableFrom: 'May 2025',
     availability: {
@@ -214,7 +214,7 @@ export default function BookPage() {
                         className={`object-cover ${
                           therapist.id === 'elizabeth-zeck' ? 'object-[center_20%]' :
                           therapist.id === 'jordan-white' ? 'object-[center_1%]' :
-                          therapist.id === 'sean-ash' ? 'object-[center_10%]' :
+                          therapist.id === 'steven-wolff' ? 'object-[center_25%]' :
                           therapist.id === 'hayden-herter' ? 'object-[center_35%]' :
                           therapist.id === 'shaden-alkhalifah' ? 'object-[center_20%]' :
                           therapist.id === 'eric-gutgarts' ? 'object-[center_25%]' :
