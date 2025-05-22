@@ -383,13 +383,13 @@ export default function Home() {
               //   // specialties: ['CBT', 'Mindfulness', 'African American Community'],
               //   profileLink: '/therapists/eric-gutgarts'
               // }, 
-              {
-                name: 'Megan Burton',
-                image: meganImage,
-                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
-                // specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
-                profileLink: '/therapists/megan-burton'
-              }
+              // {
+              //   name: 'Megan Burton',
+              //   image: meganImage,
+              //   role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+              //   // specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
+              //   profileLink: '/therapists/megan-burton'
+              // }
             ].map((member, index) => (
               <Link href={member.profileLink} key={index}>
                 <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow md:transform md:hover:-translate-y-1">

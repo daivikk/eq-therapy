@@ -12,26 +12,26 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h4 className="font-medium text-[#2C1A47]">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/contact" className="text-sm text-[#2C1A47] hover:text-[#000000]">
                   About Us
                 </Link>
-              </li>
+              </li> */}
               {/* <li>
                 <Link href="/" className="text-sm text-[#5C4D3C] hover:text-[#8B7355]">
                   Services
                 </Link>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href="/book" className="text-sm text-[#2C1A47] hover:text-[#000000]">
                   Clinical Team
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div className="space-y-4">
             <h4 className="font-medium text-[#2C1A47]">Contact</h4>
