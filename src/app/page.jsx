@@ -186,7 +186,7 @@ export default function Home() {
                 src={ericImage}
                 alt="Dr. Eric Gutgarts - EQ Therapy"
                 fill
-                className="object-cover object-[center_40%]"
+                className="object-cover object-[center_35%]"
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                 <Link
