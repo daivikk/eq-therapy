@@ -14,6 +14,8 @@ import ericImage from '../app/images/eric.png';
 import gianellaImage from '../app/images/gianella.png';
 import jordanImage from '../app/images/jordan.png';
 import stevenImage from '../app/images/steven.jpg';
+import markImage from '../app/images/mark.jpg';
+import willImage from '../app/images/will.jpg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
@@ -132,18 +134,18 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src={elizabethImage}
-                alt="Elizabeth Zeck - EQ Therapy"
+                src={willImage}
+                alt="Will - EQ Therapy"
                 fill
-                className="object-cover object-[center_40%]"
+                className="object-cover object-[center_10%]"
                 priority
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                 <Link
-                  href="/therapists/elizabeth-zeck"
+                  href="/therapists/will"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
-                  Start Therapy with Elizabeth
+                  Start Therapy with Will
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                 </Link>
               </div>
@@ -155,90 +157,101 @@ export default function Home() {
       {/* The EQ Method Section */}
       <AnimatedSection className="py-20 bg-[#EDE1FF]">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+          <motion.h2 
+            className="text-4xl font-['Instrument Sans'] text-[#2C1A47] text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="grid grid-cols-1 gap-4">
-              <motion.div 
-                className="relative h-[500px] rounded-2xl overflow-hidden"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <Image
-                  src={gianellaImage}
-                  alt="Gianella Lombardi - EQ Therapy"
-                  fill
-                  className="object-cover object-[center_40%]"
-                />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Link
-                    href="/therapists/gianella-lombardi"
-                    className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
-                  >
-                    Start Therapy with Gianella
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
-                  </Link>
-                </div>
-              </motion.div>
-              <motion.div 
-                className="relative h-[500px] rounded-2xl overflow-hidden mt-12"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-              >
-                <Image
-                  src={jordanImage}
-                  alt="Jordan - EQ Therapy"
-                  fill
-                  className="object-cover object-[center_10%]"
-                />
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Link
-                    href="/therapists/jordan-white"
-                    className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
-                  >
-                    Start Therapy with Jordan
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
-                  </Link>
-                </div>
-              </motion.div>
-            </div>
+            Meet Our Co-Founders
+          </motion.h2>
+          
+          {/* Eric Gutgarts Section */}
+          <motion.div 
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.div 
+              className="relative h-[500px] rounded-2xl overflow-hidden"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Image
+                src={ericImage}
+                alt="Dr. Eric Gutgarts - EQ Therapy"
+                fill
+                className="object-cover object-[center_40%]"
+              />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <Link
+                  href="/therapists/eric-gutgarts"
+                  className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
+                >
+                  Start Therapy with Eric
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
+                </Link>
+              </div>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h2 className="text-4xl font-['Instrument Sans'] text-[#2C1A47] mb-6">The EQ Method</h2>
-              <p className="text-[#2C1A47] mb-8">
-                The EQ Method uses a model of utilizing evidence-based theoretical orientations to increase your capacity to develop a self-concept that can be an indisputable strength in accomplishing your personal goals. Therapists are trained to work with clients who already have emotional awareness, social skills, professional acumen, and, most importantly, the ability to keep themselves accountable based on their intelligence. Throughout therapy, you will go through three phases:
+              <h3 className="text-2xl font-['Instrument Sans'] text-[#2C1A47] mb-4">Dr. Eric Gutgarts</h3>
+              <p className="text-[#2C1A47]">
+                Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University. Dr. Gutgarts is an Adjunct Professor in the graduate mental health counseling program at the NYU Steinhardt School of Culture, Education, and Human Development and has been an Extended Learning Mentor at the Johns Hopkins University School of Education for several years. In this role, he mentors over a dozen graduate students each year who are earning their master's degree in education with a focus on International Teaching, Entrepreneurship in Education, and Global Leadership. Dr Gutgarts' dissertation focused on the mental health experience of intercollegiate athletes. He uses a cognitive-behavioral orientation with solution-focused and psychodynamic approaches to meet clients' needs. Dr. Gutgarts works with college students, industry professionals, athletes, and entrepreneurs. As the Co-Founder of EQ Therapy, Dr. Gutgarts is passionate about supporting as many high-performing individuals and couples who want to develop more emotional intelligence through an evidence-based treatment modality.
               </p>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 1: Psychodynamic Therapy</h3>
-                  <p className="text-[#2C1A47]">
-                    You will start your therapeutic journey by understanding what fears and anxieties are influencing thought patterns and emotional responses. With a psychodynamic approach at the beginning of treatment, you can become more cognizant of conditioned thoughts or behaviors and how they relate to experiences in the here-and-now. Intrusive thought patterns will be identified, while consistent themes will be focused on using cognitive challenging and rationalization techniques. Relationships will be explored through social, family, romantic, and professional contexts. You will aim to make meaning of past experiences and process anything that may still be affecting you today.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 2: Cognitive Behavioral Therapy</h3>
-                  <p className="text-[#2C1A47]">
-                    In the next stage of your therapeutic journey, you will use a cognitive-behavioral approach to begin making the changes you want to see in your life. Interpersonally, this would result in changing expectations and setting boundaries. Professionally, this would result in advocating for what you want or pursuing what makes you most fulfilled in life. Romantically, this would result in self-awareness and transparency regarding what you want and what it looks like. Personally, this would result in focusing less on constructs that you can't control and feeling empowered by the way you can begin to control the next chapters of your life.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">Phase 3: Solution Focused Approach</h3>
-                  <p className="text-[#2C1A47]">
-                    With the integration of solution-focused therapy, progress will be revisited frequently, clients will be able to feel "in the driver's seat" with the direction of their treatment plan, and clinical approaches will be used in accordance with each client's treatment goals. The EQ Clinical Team is passionate about helping clients accomplish what they want to see change at the end of their therapy. They specialize in areas where high-performing professionals experience hardships like perfectionism, ADHD management, rumination or spiraling thought patterns, seeking the approval of others, and more.
-                  </p>
-                </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Mark Louie Section */}
+          <motion.div 
+            className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:order-2"
+            >
+              <h3 className="text-2xl font-['Instrument Sans'] text-[#2C1A47] mb-4">Dr. Mark Louie</h3>
+              <p className="text-[#2C1A47]">
+                Dr. Mark Louie has an empirical background in both psychology and performance science. He earned a Master's degree in Counseling Psychology from Teachers College, Columbia University, and also holds a doctorate in Exercise Physiology from the same institution, where his research focused on the positive effects of strength training on mental health outcomes. Dr. Louie worked closely with the Sport Psychologist of the NBA's Brooklyn Nets during the 2021 NBA Draft to help develop transition support and highlight potential needs for amateur players' adjustment into professional basketball. He is a Certified Mental Performance Consultant (CMPC) through the Association for Applied Sport Psychology and currently lead the Championship Performance program within a Division I athletic department. As a Co-Founder of EQ Therapy, he believes the therapeutic process should be a collaborative, high-energy, and emotionally attuned to develop emotional intelligence at the highest level. Drawing from his experience in high-performance environments at Columbia Athletics, his clinical work focuses on mindfulness, cognitive reframing, and strategic goal setting.
+              </p>
+            </motion.div>
+            <motion.div 
+              className="relative h-[500px] rounded-2xl overflow-hidden lg:order-1"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <Image
+                src={markImage}
+                alt="Dr. Mark Louie - EQ Therapy"
+                fill
+                className="object-cover object-[center_10%]"
+              />
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <Link
+                  href="/therapists/mark-louie"
+                  className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
+                >
+                  Start Therapy with Mark
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
@@ -280,12 +293,12 @@ export default function Home() {
               {
                 title: 'Industry Leaders',
                 // description: 'Executive coaching and leadership development for industry professionals.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 2L2 7v10l10 5l10-5V7L12 2m0 2.5L20 9v6l-8 4l-8-4V9l8-4.5M12 11a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6.5c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 2L2 7v10l10 5l10-5V7L12 2m0 2.5L20 9v6l-8 4l-8-4V9l8-4.5M12 11a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6.5c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2s-2 .9-2 2"/></svg>
               },
               {
                 title: 'Performing Artists',
                 // description: 'Support for artists managing performance anxiety and creative blocks.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6m-2 16c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2"/></svg>
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 3v10.55c-.59-.34-1.27-.55-2-.55c-2.21 0-4 1.79-4 4s1.79 4 4 4s4-1.79 4-4V7h4V3h-6m-2 16c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2s-2 .9-2 2"/></svg>
               },
               {
                 title: 'Creative Professionals',
@@ -295,7 +308,7 @@ export default function Home() {
               {
                 title: 'Medical Professionals',
                 // description: 'Therapy for healthcare workers managing stress and burnout.',
-                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 2L2 7v10l10 5l10-5V7L12 2m0 2.5L20 9v6l-8 4l-8-4V9l8-4.5M12 11a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6.5c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2C1A47" d="M12 2L2 7v10l10 5l10-5V7L12 2m0 2.5L20 9v6l-8 4l-8-4V9l8-4.5M12 11a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 6.5c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2s-2 .9-2 2"/></svg>
               },
               {
                 title: 'Educators',
@@ -376,6 +389,13 @@ export default function Home() {
                 // specialties: ['CBT', 'Mindfulness', 'African American Community'],
                 profileLink: '/therapists/steven-wolff'
               },
+              {
+                name: 'Will',
+                image: willImage,
+                role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
+                // specialties: ['Integrative Therapy', 'Sports Psychology', 'CBT', 'Psychodynamic'],
+                profileLink: '/therapists/will'
+              },
               // {
               //   name: 'Dr. Eric Gutgarts',
               //   image: ericImage,
@@ -398,7 +418,7 @@ export default function Home() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className={`object-cover ${member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Steven Wolff' ? 'object-[center_25%] ': member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
+                      className={`object-cover ${member.name === 'Will' ? 'object-[center_10%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Steven Wolff' ? 'object-[center_25%]' : member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
                     />
                   </div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{member.name}</h3>

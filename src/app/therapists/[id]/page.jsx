@@ -16,6 +16,8 @@ import jordanImage from '../../images/jordan.png';
 import haydenImage from '../../images/hayden.png';
 import stevenImage from '../../images/steven.jpg';
 import meganImage from '../../images/megan.png';
+import markImage from '../../images/mark.jpg';
+import willImage from '../../images/will.jpg';
 
 const therapists = [
   {
@@ -149,14 +151,49 @@ const therapists = [
     image: ericImage,
     bio: "Therapy is an opportunity for you to raise awareness about yourself, your relationship with others, and your view of the world. When we begin working together, you can start changing circumstances that are in your control, and find ways to focus less on factors that are out of your control. To me, therapy is a safe space to be vulnerable and intentional with what you hope to accomplish. Using CBT as a framework, we will explore coping methods that can help you improve interpersonal relationships, reduce symptoms of anxiety or depression, challenge intrusive thoughts, increase self-determination, adopt a growth mindset, and commit to structured goals. I remain flexible with therapeutic approaches to meet clients' individual needs.",
     // specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
-    rate: '$499 per session',
-    availabilityNote: 'Availability is limited for my caseload',
+    rate: '$300 per session',
     availability: {
-      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
-      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
-      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
-      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
-      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      saturday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      sunday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
+    }
+  },
+  {
+    id: 'mark-louie',
+    name: 'Dr. Mark Louie',
+    image: markImage,
+    bio: "Dr. Mark Louie has an empirical background in both psychology and performance science. He earned a Master's degree in Counseling Psychology from Teachers College, Columbia University, and also holds a doctorate in Exercise Physiology from the same institution, where his research focused on the positive effects of strength training on mental health outcomes. Dr. Louie worked closely with the Sport Psychologist of the NBA's Brooklyn Nets during the 2021 NBA Draft to help develop transition support and highlight potential needs for amateur players' adjustment into professional basketball. He is a Certified Mental Performance Consultant (CMPC) through the Association for Applied Sport Psychology and currently lead the Championship Performance program within a Division I athletic department. As a Co-Founder of EQ Therapy, he believes the therapeutic process should be a collaborative, high-energy, and emotionally attuned to develop emotional intelligence at the highest level. Drawing from his experience in high-performance environments at Columbia Athletics, his clinical work focuses on mindfulness, cognitive reframing, and strategic goal setting.",
+    // specialties: ['Sport Psychology', 'Performance Enhancement', 'Mindfulness', 'Goal Setting'],
+    rate: '$300 per session',
+    availability: {
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      saturday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      sunday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
+    }
+  },
+  {
+    id: 'will',
+    name: 'Will',
+    image: willImage,
+    bio: "As a therapist, It is my goal to help individuals navigate emotional challenges and relational patterns that impact personal and professional growth. Drawing from an integrative approach, I combine humanistic, psychodynamic, and cognitive-behavioral therapy (CBT) techniques to provide a comprehensive therapeutic experience. Sports psychology is a specialized clinical interest, based on diverse experiences working with athletic populations throughout my career. I believe in the power of authentic, empathetic relationships to foster healing and self-awareness. By exploring unconscious patterns and reframing limiting beliefs, I work collaboratively with clients to facilitate meaningful change and personal development.",
+    // specialties: ['Integrative Therapy', 'Sports Psychology', 'CBT', 'Psychodynamic'],
+    rate: 'Insurance Rate: $100',
+    availability: {
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      saturday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      sunday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
   }
 ];

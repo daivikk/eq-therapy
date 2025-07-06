@@ -15,6 +15,7 @@ import haydenImage from '../images/hayden.png';
 import stevenImage from '../images/steven.jpg';
 import Link from 'next/link';
 import meganImage from '../images/megan.png';
+import willImage from '../images/will.jpg';
 
 
 const therapists = [
@@ -129,6 +130,24 @@ const therapists = [
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
   },
+  {
+    id: 'will',
+    name: 'Will',
+    image: willImage,
+    bio: "As a therapist, It is my goal to help individuals navigate emotional challenges and relational patterns that impact personal and professional growth. Drawing from an integrative approach, I combine humanistic, psychodynamic, and cognitive-behavioral therapy (CBT) techniques to provide a comprehensive therapeutic experience. Sports psychology is a specialized clinical interest, based on diverse experiences working with athletic populations throughout my career. I believe in the power of authentic, empathetic relationships to foster healing and self-awareness. By exploring unconscious patterns and reframing limiting beliefs, I work collaboratively with clients to facilitate meaningful change and personal development.",
+    // specialties: ['Integrative Therapy', 'Sports Psychology', 'CBT', 'Psychodynamic'],
+    rate: 'Insurance Accepted',
+    availableFrom: 'May 2025',
+    availability: {
+      monday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      friday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      saturday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM'],
+      sunday: ['9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
+    }
+  },
   // {
   //   id: 'megan-burton',
   //   name: 'Megan Burton',
@@ -212,6 +231,7 @@ export default function BookPage() {
                         alt={therapist.name}
                         fill
                         className={`object-cover ${
+                          therapist.id === 'will' ? 'object-[center_5%]' :
                           therapist.id === 'elizabeth-zeck' ? 'object-[center_20%]' :
                           therapist.id === 'jordan-white' ? 'object-[center_1%]' :
                           therapist.id === 'steven-wolff' ? 'object-[center_25%]' :

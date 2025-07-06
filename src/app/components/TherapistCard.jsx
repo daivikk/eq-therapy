@@ -19,6 +19,8 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
             therapist.id === 'megan-burton' ? 'object-[center_10%]' :
             therapist.id === 'eric-gutgarts' ? 'object-[center_25%]' :
             therapist.id === 'gianella-lombardi' ? 'object-[center_20%]' :
+            therapist.id === 'mark-louie' ? 'object-[center_10%]' :
+            therapist.id === 'will' ? 'object-[center_5%]' :
             'object-center'
           }`}
         />
