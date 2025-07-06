@@ -130,9 +130,41 @@ const therapists = [
       friday: ['11:00 AM', '12:00 PM', '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM', '6:00 PM', '7:00 PM']
     }
   },
+  // {
+  //   id: 'megan-burton',
+  //   name: 'Megan Burton',
+  //   image: meganImage,
+  //   bio: "I am passionate about helping clients develop emotional intelligence and achieve their personal and professional goals. With a background in both clinical psychology and business, I bring a unique perspective to therapy that combines evidence-based practices with practical strategies for success. My approach is collaborative and tailored to each client's needs, focusing on developing self-awareness, managing emotions effectively, and building meaningful relationships. I specialize in working with high-performing professionals who are looking to enhance their emotional intelligence and achieve their full potential. Please note that I will be available starting from August 2025.",
+  //   // specialties: ['Emotional Intelligence', 'Professional Development', 'Anxiety Management', 'Leadership Coaching'],
+  //   rate: 'Insurance Accepted',
+  //   availableFrom: 'May 2025',
+  //   availability: {
+  //     monday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+  //     tuesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+  //     wednesday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+  //     thursday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+  //     friday: ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM']
+  //   }
+  // },
+  {
+    id: 'eric-gutgarts',
+    name: 'Dr. Eric Gutgarts',
+    image: ericImage,
+    bio: "Therapy is an opportunity for you to raise awareness about yourself, your relationship with others, and your view of the world. When we begin working together, you can start changing circumstances that are in your control, and find ways to focus less on factors that are out of your control. To me, therapy is a safe space to be vulnerable and intentional with what you hope to accomplish. Using CBT as a framework, we will explore coping methods that can help you improve interpersonal relationships, reduce symptoms of anxiety or depression, challenge intrusive thoughts, increase self-determination, adopt a growth mindset, and commit to structured goals. I remain flexible with therapeutic approaches to meet clients' individual needs.",
+    // specialties: ['Cognitive Behavioral Therapy', 'Sports Psychology', 'Solution-Focused Therapy'],
+    rate: '$499 per session',
+    availabilityNote: 'Availability is limited for my caseload',
+    availability: {
+      monday: ['10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'],
+      tuesday: ['1:00 PM', '2:00 PM', '3:00 PM'],
+      wednesday: ['9:00 AM', '10:00 AM', '11:00 AM'],
+      thursday: ['2:00 PM', '3:00 PM', '4:00 PM'],
+      friday: ['1:00 PM', '2:00 PM', '3:00 PM']
+    }
+  },
   {
     id: 'will',
-    name: 'Will',
+    name: 'Will Del Santo',
     image: willImage,
     bio: "As a therapist, It is my goal to help individuals navigate emotional challenges and relational patterns that impact personal and professional growth. Drawing from an integrative approach, I combine humanistic, psychodynamic, and cognitive-behavioral therapy (CBT) techniques to provide a comprehensive therapeutic experience. Sports psychology is a specialized clinical interest, based on diverse experiences working with athletic populations throughout my career. I believe in the power of authentic, empathetic relationships to foster healing and self-awareness. By exploring unconscious patterns and reframing limiting beliefs, I work collaboratively with clients to facilitate meaningful change and personal development.",
     // specialties: ['Integrative Therapy', 'Sports Psychology', 'CBT', 'Psychodynamic'],

@@ -135,7 +135,7 @@ export default function Home() {
             >
               <Image
                 src={willImage}
-                alt="Will - EQ Therapy"
+                alt="Will Del Santo - EQ Therapy"
                 fill
                 className="object-cover object-[center_10%]"
                 priority
@@ -145,7 +145,7 @@ export default function Home() {
                   href="/therapists/will"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
-                  Start Therapy with Will
+                  Start Therapy with Will Del Santo
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                 </Link>
               </div>
@@ -193,7 +193,7 @@ export default function Home() {
                   href="/therapists/eric-gutgarts"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
-                  Start Therapy with Eric
+                  Start Therapy with Dr. Gutgarts
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                 </Link>
               </div>
@@ -204,7 +204,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-['Instrument Sans'] text-[#2C1A47] mb-4">Dr. Eric Gutgarts</h3>
+              <h3 className="text-2xl font-['Instrument Sans'] text-[#2C1A47] mb-4">Dr. Eric Gutgarts, LMHC, LPC, Ed.D.</h3>
               <p className="text-[#2C1A47]">
                 Dr. Eric Gutgarts received his master's degree in mental health counseling from NYU and his doctorate in entrepreneurial leadership from Johns Hopkins University. Dr. Gutgarts is an Adjunct Professor in the graduate mental health counseling program at the NYU Steinhardt School of Culture, Education, and Human Development and has been an Extended Learning Mentor at the Johns Hopkins University School of Education for several years. In this role, he mentors over a dozen graduate students each year who are earning their master's degree in education with a focus on International Teaching, Entrepreneurship in Education, and Global Leadership. Dr Gutgarts' dissertation focused on the mental health experience of intercollegiate athletes. He uses a cognitive-behavioral orientation with solution-focused and psychodynamic approaches to meet clients' needs. Dr. Gutgarts works with college students, industry professionals, athletes, and entrepreneurs. As the Co-Founder of EQ Therapy, Dr. Gutgarts is passionate about supporting as many high-performing individuals and couples who want to develop more emotional intelligence through an evidence-based treatment modality.
               </p>
@@ -249,7 +249,7 @@ export default function Home() {
                   href="/therapists/mark-louie"
                   className="px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm font-medium text-[#2C1A47] hover:bg-white transition-colors text-sm shadow-sm flex items-center gap-2"
                 >
-                  Start Therapy with Mark
+                  Start Therapy with Dr. Louie
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76"/></svg>
                 </Link>
               </div>
@@ -390,7 +390,7 @@ export default function Home() {
                 profileLink: '/therapists/steven-wolff'
               },
               {
-                name: 'Will',
+                name: 'Will Del Santo',
                 image: willImage,
                 role: 'Graduate Program: Counseling for Mental Health and Wellness at NYU Steinhardt School of Culture, Education, and Human Development',
                 // specialties: ['Integrative Therapy', 'Sports Psychology', 'CBT', 'Psychodynamic'],
@@ -418,7 +418,7 @@ export default function Home() {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className={`object-cover ${member.name === 'Will' ? 'object-[center_10%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Steven Wolff' ? 'object-[center_25%]' : member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
+                      className={`object-cover ${member.name === 'Will Del Santo' ? 'object-[center_10%]' : member.name === 'Gianella Lombardi' ? 'object-[center_20%]' : member.name === 'Jordan White' ? 'object-[center_1%]' : member.name === 'Hayden Herter' ? 'object-[center_30%]' : member.name === 'Steven Wolff' ? 'object-[center_25%]' : member.name === 'Elizabeth Zeck' ? 'object-[center_15%]' : member.name === 'Megan Burton' ? 'object-[center_10%]' : 'object-center'}`}
                     />
                   </div>
                   <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{member.name}</h3>
