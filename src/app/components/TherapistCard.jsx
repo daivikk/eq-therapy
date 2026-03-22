@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function TherapistCard({ therapist, imagePosition = 'object-center' }) {
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-      <div className="relative h-[400px] w-full mb-4 rounded-lg overflow-hidden">
+    <div className="bg-white p-6 rounded-2xl border border-[#17153E]/10 shadow-sm hover:shadow-md transition-shadow">
+      <div className="relative h-[400px] w-full mb-4 rounded-xl overflow-hidden">
         <Image
           src={therapist.image}
           alt={therapist.name}
@@ -26,10 +26,10 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
         />
       </div>
       <div className="p-6">
-        <h3 className="text-2xl font-medium text-[#2C1A47] mb-2">
+        <h3 className="text-2xl font-semibold text-[#17153E] mb-2">
           {therapist.name}
         </h3>
-        <p className="text-[#2C1A47] mb-4">{therapist.bio}</p>
+        <p className="text-[#17153E]/80 leading-relaxed mb-4">{therapist.bio}</p>
         {/* <div className="flex flex-wrap gap-2 mb-4">
           {therapist.specialties.map((specialty, index) => (
             <span
@@ -41,15 +41,15 @@ export default function TherapistCard({ therapist, imagePosition = 'object-cente
           ))}
         </div> */}
         <div className="flex justify-between items-center">
-          <span className="text-[#2C1A47] font-medium">{therapist.rate}</span>
+          <span className="text-[#17153E] font-medium">{therapist.rate}</span>
           {therapist.availableFrom && (
-            <span className="text-[#2C1A47] text-sm">
+            <span className="text-[#17153E]/70 text-sm">
               Available from {therapist.availableFrom}
             </span>
           )}
         </div>
         {therapist.availabilityNote && (
-          <p className="text-[#2C1A47] text-sm mt-2">{therapist.availabilityNote}</p>
+          <p className="text-[#17153E]/70 text-sm mt-2">{therapist.availabilityNote}</p>
         )}
       </div>
     </div>

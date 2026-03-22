@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-// import logoImage from '../images/Logo.png';
-import logoImage from '../images/newlogo.png';
+import logoImage from '../images/marriage_counseling_logo.png';
 
 
 export default function Navigation() {
@@ -83,15 +82,15 @@ export default function Navigation() {
     });
   };
 
-  // Navigation items with section IDs for scrolling
   const navItems = [
-    // { name: 'Clinical Team', href: '/book' },
-    // { name: 'Leadership Team', href: '/contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Marriage Therapists', href: '/book' },
+    { name: 'Co-Founders', href: '/co-founders' },
   ];
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/90 shadow-sm backdrop-blur-md' : 'bg-white/80 backdrop-blur-sm'
+      scrolled ? 'bg-white/50 shadow-sm backdrop-blur-md' : 'bg-white/35 backdrop-blur-md'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
@@ -106,16 +105,16 @@ export default function Navigation() {
               className="flex items-center cursor-pointer"
               aria-label="Go to top of page"
             >
-              <div className="relative w-16 h-16 mt-2 mr-2">
+              <div className="relative w-11 h-11 mt-1 mr-2 shrink-0">
                 <Image
                   src={logoImage}
-                  alt="EQ Therapy Logo"
+                  alt="Marriage Counseling Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-2xl font-InstrumentSans font-semibold text-[#3B2360]">
-                EQ Therapy
+              <span className="text-2xl font-InstrumentSans font-semibold text-[#17153E]">
+                Marriage Counseling
               </span>
             </button>
           </motion.div>
@@ -132,14 +131,14 @@ export default function Navigation() {
                 {item.action ? (
                   <button 
                     onClick={item.action}
-                    className="text-[#2C1A47] hover:text-[#000000] transition-colors cursor-pointer"
+                    className="text-[#17153E] hover:text-[#0e0d2e] transition-colors cursor-pointer"
                   >
                     {item.name}
                   </button>
                 ) : (
                   <Link 
                     href={item.href} 
-                    className="text-[#2C1A47] hover:text-[#000000] transition-colors"
+                    className="text-[#17153E] hover:text-[#0e0d2e] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -153,9 +152,9 @@ export default function Navigation() {
             >
               <Link 
                 href="/book" 
-                className="px-4 py-2 rounded-full bg-[#2C1A47] text-white hover:bg-[#000000] transition-colors"
+                className="px-4 py-2 rounded-full bg-[#17153E] text-white hover:bg-[#0e0d2e] transition-colors"
               >
-                Book a Session
+                Get Started
               </Link>
             </motion.div>
           </div>
@@ -164,7 +163,7 @@ export default function Navigation() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#2C1A47] hover:text-[#000000]"
+              className="text-[#17153E] hover:text-[#0e0d2e]"
             >
               <svg
                 className="h-6 w-6"
@@ -205,9 +204,10 @@ export default function Navigation() {
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
               {[
-                // { name: 'Clinical Team', href: '/book' },
-                // { name: 'Leadership Team', href: '/contact' },
-                { name: 'Book a Session', href: '/book' }
+                { name: 'Home', href: '/' },
+                { name: 'Marriage Therapists', href: '/book' },
+                { name: 'Co-Founders', href: '/co-founders' },
+                { name: 'Get Started', href: '/book' },
               ].map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -218,14 +218,14 @@ export default function Navigation() {
                   {item.action ? (
                     <button
                       onClick={item.action}
-                      className="block w-full text-left px-3 py-2 text-[#2C1A47] hover:text-[#000000] cursor-pointer"
+                      className="block w-full text-left px-3 py-2 text-[#17153E] hover:text-[#0e0d2e] cursor-pointer"
                     >
                       {item.name}
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="block px-3 py-2 text-[#2C1A47] hover:text-[#000000]"
+                      className="block px-3 py-2 text-[#17153E] hover:text-[#0e0d2e]"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
