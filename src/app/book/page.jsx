@@ -221,15 +221,15 @@ export default function BookPage() {
   const filteredTherapists = therapists.filter(t => t.availableFrom === 'May 2025');
 
   return (
-    <div className="min-h-screen bg-white font-['Inter']">
+    <div className="min-h-screen bg-[#FEF8FD]">
       <Navigation />
 
       <main className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-medium text-[#2C1A47] text-center mb-4">
+          <h1 className="text-4xl md:text-5xl font-serif italic text-[#17153E] text-center mb-4">
             Book a Session
           </h1>
-          <p className="text-[#2C1A47] text-center mb-8 max-w-2xl mx-auto">
+          <p className="text-[#17153E]/70 text-center mb-8 max-w-2xl mx-auto leading-relaxed">
             Choose a therapist and schedule your session at a time that works best for you.
           </p>
 
@@ -239,7 +239,7 @@ export default function BookPage() {
                 <TherapistCard therapist={selectedTherapist} />
                 <Link
                   href="/book"
-                  className="mt-4 w-full px-4 py-2 rounded-full border border-[#503622] text-[#503622] hover:bg-[#F5F1EE] transition-colors text-center block"
+                  className="mt-4 w-full px-4 py-2 rounded-full border border-[#17153E]/25 text-[#17153E] hover:bg-[#17153E]/5 transition-colors text-center block text-sm"
                 >
                   Back to All Therapists
                 </Link>
@@ -256,8 +256,8 @@ export default function BookPage() {
                   href={`/therapists/${therapist.id}`}
                   className="text-left"
                 >
-                  <div className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                    <div className="relative h-[300px] w-full mb-4 rounded-lg overflow-hidden">
+                  <div className="bg-white p-6 rounded-2xl border border-[#17153E]/10 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="relative h-[300px] w-full mb-4 rounded-xl overflow-hidden">
                       <Image
                         src={therapist.image}
                         alt={therapist.name}
@@ -275,8 +275,8 @@ export default function BookPage() {
                         }`}
                       />
                     </div>
-                    <h3 className="text-xl font-['Instrument Sans'] text-[#2C1A47] mb-2">{therapist.name}</h3>
-                    <p className="text-sm font-['Inter Medium'] text-[#2C1A47] mb-4">{therapist.bio}</p>
+                    <h3 className="text-xl font-semibold text-[#17153E] mb-2">{therapist.name}</h3>
+                    <p className="text-sm text-[#17153E]/80 leading-relaxed mb-4">{therapist.bio}</p>
                     {/* <div className="flex flex-wrap gap-2">
                       {therapist.specialties.map((specialty, i) => (
                         <span key={i} className="px-3 py-1 bg-[#F5F1EE] text-[#503622] rounded-full text-xs">
